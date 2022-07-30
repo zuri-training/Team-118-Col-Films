@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# User development files
+coreels.zip
+old-requirements.txt
+coreels.code-workspace
+test-data/

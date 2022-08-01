@@ -5,7 +5,7 @@
 
 ## Installation {installation}
 
-The project is built and deployed with **Django** and below are instructions on how to set it up and run it localy on your system.
+The project is built and deployed with **Django** and below are instructions on how to set it up and run it locally on your system.
 
 1. **Clone a Copy of the Project.**
    Clone a copy of the project from GitHub or extract the zipped archive into a directory on your computer where you can easily access it.
@@ -51,7 +51,7 @@ This project was built, developed and deployed by Team 118 of Zuri/I4G training 
 
 ## License {license}
 
-The code is MIT licensed. To understand your rights, privileges and limitations better, please referr to the [LICENSE](LICENSE "License File").
+The code is MIT licensed. To understand your rights, privileges and limitations better, please refer to the [LICENSE](LICENSE "License File").
 
 ## Thanks & Credits {credits}
 

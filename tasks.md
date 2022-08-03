@@ -10,4 +10,12 @@ This is a way to show my team members how to track and fix github issues assigne
 - Created a new branch
 - Made changes to tasks.md
 - Commited my changes
-- pushed it to GitHub
+- pushed it to Github
+
+## worked on all aspect of user research
+
+- worked on empathy map
+- carried out competitive analysis
+- brainstormed features and pain points
+- documentation along side some team members
+- worked on the research objective and problem statement

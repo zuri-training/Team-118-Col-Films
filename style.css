@@ -100,10 +100,20 @@ body {
 .btn--1 {
   color: var(--color-style-2);
   background: var(--color-style-3);
+  transition: var(--transition);
 }
 .btn--2 {
   color: var(--color-style-3);
   background: var(--color-style-2);
+  transition: var(--transition);
+}
+.btn--1:hover {
+  color: var(--color-style-3);
+  background: var(--color-style-2);
+}
+.btn--2:hover {
+  color: var(--color-style-2);
+  background: var(--color-style-3);
 }
 .footer-container {
   padding: 2rem 3rem;

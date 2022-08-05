@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
+
+/* 
+=================
+Global Styles
+=================
+*/
 :root {
   --color-style-1: hsl(0, 0%, 98%);
   --color-style-2: #011119;
@@ -37,11 +43,21 @@ input {
   font-family: var(--font-family-2);
 }
 body {
-  background: var(--clr-primary-1);
+  background: var(--color--4);
   line-height: 1.5;
   font-size: 0.875rem;
   overflow-x: hidden;
 }
+/* 
+=================
+End of Global Styles
+=================
+*/
+/* 
+=================
+Header
+=================
+*/
 .nav-container {
   background: var(--color-style-2);
   padding: 1rem 2rem;
@@ -102,6 +118,7 @@ body {
   border: 2px solid var(--color-style-3);
   padding: 0.5rem 1.25rem;
   border-radius: 0.35rem;
+  width: 6rem;
 }
 .btn--1 {
   color: var(--color-style-2);
@@ -121,6 +138,32 @@ body {
   color: var(--color-style-2);
   background: var(--color-style-3);
 }
+@media screen and (max-width: 920px) {
+  .nav-links-container,
+  .signing {
+    display: none;
+  }
+}
+@media screen and (min-width: 920px) {
+  .nav-button {
+    display: none;
+  }
+}
+/* 
+=================
+End of Header
+=================
+*/
+.main {
+  background: var(--color-style-4);
+  height: 30vh;
+  /* You can change this styles as you wish */
+}
+/* 
+=================
+Footer
+=================
+*/
 .footer-container {
   padding: 2rem 3rem;
   background: var(--color-style-2);
@@ -249,10 +292,14 @@ body {
     width: 18rem;
   }
 }
-
 /* 
 =================
-mobile screen
+End of Footer
+=================
+*/
+/* 
+=================
+Mobile Screen
 =================
 */
 @media screen and (max-width: 920px) {
@@ -292,3 +339,86 @@ mobile screen
     display: none;
   }
 }
+/* 
+=================
+End of Mobile Screen
+=================
+*/
+/* 
+=================
+Modal overlay
+=================
+*/
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  transition: var(--transition);
+  z-index: 100;
+}
+.remove-overlay {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* 
+=================
+End of modal overlay
+=================
+*/
+/* 
+=================
+Aside
+=================
+*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: var(--color-style-2);
+  transition: all 0.2s linear;
+  transform: translate(0);
+  padding-top: 1rem;
+  z-index: 200;
+}
+.sidebar-close {
+  transform: translate(100%);
+}
+.close {
+  position: absolute;
+  right: 0;
+  padding-right: 1rem;
+  display: block;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.sidebar-links {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+.side-links {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  width: 7rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.side-btn {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+}
+/* 
+=================
+End of Aside
+=================
+*/

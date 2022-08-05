@@ -2,9 +2,9 @@
 
 This documentation is written for the frontend development of the Zuri project of team 118.
 
-## The website hosting services.
+## The website's hosting platform
 
-- The site is hosted on [team-118-project](college-film-team-118.netlify.app)
+- The site is hosted on [team-118-project](https://college-film-team-118.netlify.app/)
 
 ## Developers {developers}
 

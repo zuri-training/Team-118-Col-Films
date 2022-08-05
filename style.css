@@ -382,7 +382,6 @@ Aside
   width: 60%;
   height: 100%;
   background: var(--color-style-2);
-  transition: all 0.2s linear;
   transform: translate(0);
   padding-top: 1rem;
   z-index: 200;

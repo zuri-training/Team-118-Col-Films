@@ -358,7 +358,7 @@ Modal overlay
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
-  /* transition: var(--transition); */
+  transition: all 0.1s linear;
   z-index: 100;
 }
 .remove-overlay {
@@ -383,7 +383,7 @@ Aside
   width: 60%;
   height: 100%;
   background: var(--color-style-2);
-  /* transition: all 0.2s linear; */
+  transition: all 0.2s linear;
   transform: translate(0);
   padding-top: 1rem;
   z-index: 200;

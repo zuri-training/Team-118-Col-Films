@@ -7,7 +7,7 @@ Global Styles
 =================
 */
 :root {
-  --color-style-1: hsl(0, 0%, 98%);
+  --color-style-1: #ffffff;
   --color-style-2: #011119;
   --color-style-3: #8ecae6;
   --color-style-4: #f2f2f2;
@@ -15,6 +15,7 @@ Global Styles
   --color-style-6: #ffb703;
   --color-style-7: #fb8500;
   --color-style-8: #808080;
+  --color-style-9: #219ebc;
   --font-family-1: "Arima Madurai", sans-serif;
   --font-family-2: "Archivo", sans-serif;
   --transition: all 0.3s linear;
@@ -160,10 +161,81 @@ End of Header
 =================
 */
 .main {
-  background: var(--color-style-4);
-  height: 30vh;
+  background: var(--color-style-1);
   /* You can change this styles as you wish */
 }
+.section {
+  padding: 1.5rem 1rem;
+}
+.section-title {
+  margin-bottom: 2rem;
+}
+.title {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-1);
+}
+.leader-container {
+  display: flex;
+  gap: 1rem;
+  line-height: 22px;
+  margin-bottom: 0.3rem;
+}
+.lead-name {
+  font-size: 1rem;
+  font-family: var(--font-family-2);
+  text-transform: uppercase;
+  font-size: 1.125rem;
+}
+.lead-title {
+  color: var(--color-style-8);
+  text-transform: capitalize;
+  font-size: 0.75rem;
+}
+.team-des {
+  margin-bottom: 2rem;
+  line-height: 22px;
+}
+.phone {
+  color: var(--color-style-9);
+  font-size: 0.75rem;
+}
+.lead {
+  display: grid;
+  align-items: end;
+}
+.small-title {
+  font-size: 1.125rem;
+  font-family: var(--font-family-1);
+  text-align: center;
+}
+.team-center {
+  display: flex;
+  gap: 0.95rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.member-cont {
+  width: 6.5rem;
+  height: 6.5rem;
+}
+.member-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.member-name {
+  text-transform: capitalize;
+  font-size: 0.625rem;
+  line-height: 22px;
+}
+.member-title {
+  text-transform: capitalize;
+  color: var(--color-style-8);
+  font-size: 0.5rem;
+}
+
 /* 
 =================
 Footer

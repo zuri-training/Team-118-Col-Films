@@ -198,6 +198,15 @@ nav {
   display: grid;
   align-items: center;
 }
+@media screen and (min-width: 920px) {
+  .hero {
+    background: url("./Images/background-image-desktop.png") center/cover
+      no-repeat;
+  }
+  .main-title {
+    max-width: 100vw;
+  }
+}
 /* 
 =================
 End of Header
@@ -234,6 +243,7 @@ Help Section
   font-size: 0.875rem;
   color: var(--color-style-2);
 }
+
 /* 
 =================
 Team Members Section

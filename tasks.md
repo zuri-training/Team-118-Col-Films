@@ -19,3 +19,9 @@ This is a way to show my team members how to track and fix github issues assigne
 - brainstormed features and pain points
 - documentation along side some team members
 - worked on the research objective and problem statement
+## worked on more user resaerch
+- created a user flow with a team member
+- worked on user personas and stories with a team member
+## worked on some design
+- created a video screen page on a desktop and mobile screen
+- created high-fi and low-fi of the video screen page

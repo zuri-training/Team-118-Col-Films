@@ -500,6 +500,7 @@ Footer
   gap: 0.5rem;
   padding: 0 1rem;
   align-items: center;
+  margin-top: 1rem;
 }
 .footer-logo p {
   color: var(--color-style-4);
@@ -579,6 +580,8 @@ Mobile Screen
   .terms {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1.68rem;
+    margin-bottom: 1.5rem;
   }
   .logo--2 {
     justify-content: space-between;

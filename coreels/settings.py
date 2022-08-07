@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 from django.urls import reverse_lazy
 
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     # Team Created Apps
     'user',
     'reel',
+    'crispy_forms',
 
     # Django default apps
     'django.contrib.admin',
@@ -66,7 +67,7 @@ ROOT_URLCONF = 'coreels.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -143,9 +144,11 @@ MEDIA_URL = '/media/'
 
 # Login and Login/Logout Redirect Url.
 LOGIN_URL = reverse_lazy("login")
-LOGIN_REDIRECT_URL = reverse_lazy("admin_dashboard")
-LOGOUT_REDIRECT_URL = reverse_lazy("home")
+LOGIN_REDIRECT_URL = reverse_lazy("index")
+LOGOUT_REDIRECT_URL = reverse_lazy("login")
 
+# EMAIL CONFIG
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Append slash to urls where needed?
 APPEND_SLASH = True

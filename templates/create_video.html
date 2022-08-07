@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+
+{% block head %} 
+<title>Ivideo|create-video</title>
+{% endblock %}
+
+{% block body %} 
+<main>
+    <!--    Registration section-->
+    <section id="registration-section">
+      <form method="POST" enctype="multipart/form-data" class="upload-form">
+        {% csrf_token %}
+        <legend class="border-bottom mb-4 text-center">Create Video</legend>
+        {{ form | crispy }}
+        <button class="btn btn-outline-info btn-block mt-3" type="submit">Submit</button>
+      </form>
+    </section>
+    <!--    End of registration section-->
+  </main>
+{% endblock %}

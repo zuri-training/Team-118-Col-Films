@@ -1,3 +1,4 @@
+from distutils.util import convert_path
 from django.db import models
 from django.conf import settings
 from django.core.validators import FileExtensionValidator
@@ -29,26 +30,31 @@ class Category(models.Model):
         return self.name
 
 
+
+# Hello Mr Festus, I'm thinking the reel model here is to serve as a store for the videos uploaded by the users,
+# if that is the case, i have made a few modifications since i will primarily be focusing this module.
+# The modifications i have made here are subject to your review
+
 class Reel(models.Model):
     """Represents each reel/short video in collection"""
 
-    user = models.ForeignKey(
+    uploader = models.ForeignKey(
         settings.AUTH_USER_MODEL, verbose_name=_("uploaded by"),
         on_delete=models.CASCADE
     )
-    name = models.CharField(
-        _("video title"), max_length=255, help_text=_("enter video short name")
+    title = models.CharField(
+        _("video title"), max_length=255, help_text=_("Enter a title for your short video")
     )
     description = models.TextField(
-        _("long description"), help_text=_("long video description")
+        _("long description"), help_text=_("Enter a description for your short video")
     )
     category = models.ManyToManyField(
         Category, verbose_name=_("video category"),
-        help_text=_("choose video category")
+        help_text=_("choose a category for your short video")
     )
-    cover = models.ImageField(
+    cover_thumbnail = models.FileField(
         _("video cover"), upload_to="reels/cover", help_text=_("cover image"),
-        null=True, blank=True
+        null=True, blank=True, validators = [FileExtensionValidator(allowed_extensions=['jpg','jpeg','png'])]
     )
     video = models.FileField(
         _("video file"), upload_to='reels', max_length=100,
@@ -57,7 +63,7 @@ class Reel(models.Model):
             'MOV','avi','mp4','webm','mkv'
         ])]
     )
-    date = models.DateTimeField(
+    date_posted = models.DateTimeField(
         _("date uploaded"), default=timezone.now,
         help_text="date video was uploaded"
     )

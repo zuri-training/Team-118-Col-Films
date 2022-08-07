@@ -16,6 +16,8 @@ Global Styles
   --color-style-7: #fb8500;
   --color-style-8: #808080;
   --color-style-9: #219ebc;
+  --color-style-10: #b4dcee;
+  --color-style-11: rgba(232, 244, 250, 0.4);
   --font-family-1: "Arima Madurai", sans-serif;
   --font-family-2: "Archivo", sans-serif;
   --transition: all 0.3s linear;
@@ -61,6 +63,8 @@ Header
 */
 nav {
   height: 5rem;
+  display: grid;
+  align-items: center;
 }
 .nav-container {
   background: var(--color-style-2);
@@ -89,19 +93,22 @@ nav {
   height: 100%;
   width: 100%;
   display: block;
+  cursor: pointer;
 }
 .logo-title {
   display: grid;
   align-items: center;
   height: auto;
-  /* border: 2px solid red; */
+  cursor: pointer;
 }
 .logo-text {
   font-family: var(--font-family-1);
   color: var(--color-style-3);
   text-transform: uppercase;
   font-size: 1.25rem;
-  /* border: 2px solid green; */
+}
+.hamburger--btn {
+  cursor: pointer;
 }
 .nav-links {
   display: flex;
@@ -129,6 +136,7 @@ nav {
   padding: 0.5rem 1.25rem;
   border-radius: 0.35rem;
   width: 6rem;
+  cursor: pointer;
 }
 .btn--1 {
   color: var(--color-style-2);
@@ -141,12 +149,11 @@ nav {
   transition: var(--transition);
 }
 .btn--1:hover {
-  color: var(--color-style-3);
-  background: var(--color-style-2);
+  background: var(--color-style-10);
+  border-color: var(--color-style-10);
 }
 .btn--2:hover {
-  color: var(--color-style-2);
-  background: var(--color-style-3);
+  background: var(--color-style-11);
 }
 @media screen and (max-width: 920px) {
   .nav-links-container,
@@ -445,6 +452,7 @@ Footer
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 16px;
+  margin-top: 0.5rem;
   border: 2px solid var(--color-style-4);
   height: 3rem;
   width: 20rem;
@@ -465,6 +473,10 @@ Footer
   transition: var(--transition);
   height: 3rem;
   width: 20rem;
+}
+.email-btn:hover {
+  background: var(--color-style-10);
+  border-color: var(--color-style-10);
 }
 .foot {
   margin-bottom: 1rem;
@@ -529,7 +541,22 @@ Mobile Screen
   .footer-center {
     display: none;
   }
-
+  .mobile-newsletter {
+    display: grid;
+    justify-content: center;
+  }
+  .mobile-form {
+    /* width: 21.375rem; */
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+  .mobile-news {
+    width: 21.375rem;
+  }
+  .footer-mobile-title {
+    text-align: center;
+  }
   .mobile-bottom {
     display: flex;
     justify-content: space-between;
@@ -582,6 +609,7 @@ Modal overlay
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(1px);
   z-index: 100;
+  cursor: pointer;
 }
 .remove-overlay {
   visibility: hidden;

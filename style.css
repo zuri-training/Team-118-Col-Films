@@ -59,6 +59,9 @@ End of Global Styles
 Header
 =================
 */
+nav {
+  height: 5rem;
+}
 .nav-container {
   background: var(--color-style-2);
   padding: 1rem 2rem;
@@ -156,6 +159,45 @@ Header
     display: none;
   }
 }
+.hero {
+  background: url("./Images/background-image-mobile.png") center/cover no-repeat;
+  height: calc(100vh - 5rem);
+  display: grid;
+  align-items: end;
+}
+.main-title {
+  text-align: center;
+  color: var(--color-style-1);
+  font-family: var(--font-family-1);
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 18.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 33px;
+}
+.hero-group {
+  width: 21.375rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2.875rem;
+}
+.hero-input {
+  background: var(--color-style-4);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 2px solid var(--color-style-4);
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.35rem;
+}
+.hero-input::placeholder {
+  color: var(--color-style-8);
+  text-transform: capitalize;
+  padding-left: 35px;
+  display: grid;
+  align-items: center;
+}
 /* 
 =================
 End of Header
@@ -164,6 +206,33 @@ End of Header
 .main {
   background: var(--color-style-1);
   /* You can change this styles as you wish */
+}
+/* 
+=================
+Help Section
+=================
+*/
+.help-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+/* .help {
+  border: 2px solid red;
+} */
+.help-image-cont {
+  width: 6rem;
+  height: 6rem;
+}
+.help-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.hero-info {
+  font-size: 0.875rem;
+  color: var(--color-style-2);
 }
 /* 
 =================

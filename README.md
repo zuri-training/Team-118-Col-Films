@@ -4,7 +4,7 @@ This documentation is written for the frontend development of the Zuri project o
 
 ## The website's hosting platform
 
-- The site is hosted on [team-118-project](https://college-film-team-118.netlify.app/)
+- The site is hosted on [Coreels](https://coreels-team-118.netlify.app/)
 
 ## Developers {developers}
 

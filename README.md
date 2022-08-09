@@ -1,6 +1,10 @@
-# COREELS Project Documentation {frontend development}
+# COREELS HEADER AND FOOTER TEMPLATES {frontend development}
 
 This documentation is written for the frontend development of the Zuri project of team 118.
+
+## Header and footer template for the mobile and desktop pages 
+
+- The repository contains the header and footer template to be used by other developers for the mobile and desktop screens
 
 ## The website's hosting platform
 
@@ -8,7 +12,10 @@ This documentation is written for the frontend development of the Zuri project o
 
 ## Developers {developers}
 
-This branch is built by Jeremiah Lateef for the Zuri Project. Other participants may contribute to the project in the future.
+- This branch is built by **Jeremiah Lateef** for the Zuri Project. Other participants may contribute to the project in the future.
+- I won't be adding other changes added to this repository, except the README.md. 
+- Changes will be added to this repository [Jeremiah's new repo](https://github.com/jeremiahlateef/Team-118-Col-Films-21)
+
 
 ## License {license}
 

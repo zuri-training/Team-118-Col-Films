@@ -9,6 +9,7 @@ This documentation is written for the frontend development of the Zuri project o
 ## Developers {developers}
 
 This branch is built by Jeremiah Lateef for the Zuri Project. Other participants may contribute to the project in the future.
+- Precious worked on the sign-in page.
 
 ## License {license}
 

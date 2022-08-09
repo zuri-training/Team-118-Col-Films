@@ -8,8 +8,12 @@ This documentation is written for the frontend development of the Zuri project o
 
 ## Developers {developers}
 
-This branch is built by Jeremiah Lateef for the Zuri Project. Other participants may contribute to the project in the future.
-- Precious worked on the sign-in page.
+This repository is built by Jeremiah Lateef for the Zuri Project. Other participants may contribute to the project in the future.
+- **Precious Worukwo's** [repository](https://github.com/Preciousglows/Team-118-Col-Films-Precious) contains the sign-up page. It has been integrated into the repo.
+
+
+## Branches
+- The [Frontend-Development](https://github.com/jeremiahlateef/Team-118-Col-Films-21/tree/frontend-development-Jeremiah-%2321) branch contains the template for the header and footer of the mobile and desktop screens I built for all the pages. 
 
 ## License {license}
 

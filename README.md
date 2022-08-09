@@ -13,7 +13,7 @@ This documentation is written for the frontend development of the Zuri project o
 ## Developers {developers}
 
 - This branch is built by **Jeremiah Lateef** for the Zuri Project. Other participants may contribute to the project in the future.
-- I won't be adding other changes added to this repository, except the README.md. 
+- I won't be adding any other changes to this repository, except the README.md. 
 - Changes will be added to this repository [Jeremiah's new repo](https://github.com/jeremiahlateef/Team-118-Col-Films-21)
 
 

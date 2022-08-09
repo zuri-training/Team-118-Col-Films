@@ -830,7 +830,7 @@ AboutT Section
   .about-info {
     max-width: 30rem;
   }
-  .about-cont-two {
+  .about-cont-one {
     display: grid;
     align-items: center;
   }

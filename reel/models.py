@@ -37,7 +37,6 @@ class Category(models.Model):
 
 class Reel(models.Model):
     """Represents each reel/short video in collection"""
-
     uploader = models.ForeignKey(
         settings.AUTH_USER_MODEL, verbose_name=_("uploaded by"),
         on_delete=models.CASCADE
@@ -69,11 +68,11 @@ class Reel(models.Model):
     )
 
     class Meta:
-        ordering = ['-date', 'name']
+        ordering = ['-date_posted', 'title']
 
 
     def __str__(self) -> str:
-        return self.name
+        return self.title
 
 
 class Comment(models.Model):

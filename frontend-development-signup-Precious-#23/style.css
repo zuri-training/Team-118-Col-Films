@@ -268,14 +268,40 @@ span{
   }
 
   .form{
-    width: 100%;
+    width: 90%;
     margin-top: 50px;
+    justify-content: center;
+    justify-self: center;
+    
   }
-
-  
-
 }
 
+
+@media screen and (max-width:376px){
+  .form{
+    max-width: 90%;  
+    justify-self: center;
+    align-self: center;
+    margin: auto;
+  }
+
+  .form h1{
+    font-size: 30px;
+  }
+
+  .checkbox{
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+  }
+
+  .label-file{
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+  }
+
+}
 /* 
 =================
 Footer

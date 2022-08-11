@@ -71,10 +71,11 @@
     </header>
     <!-- End of Header -->
     <!-- Main -->
- <main class="login-main">
+ 
+    <h1 class="login-title">Welcome Back!</h1>
         <div id="login-form">
-          <img src="Images/tablet-login/pana.svg" alt=""> 
-          <h1 class="login-title">Welcome back!</h1>
+
+          <img src="Images/tablet-login/pana.svg"class="login--image" alt=""> 
           <form action="" id="form--login">
               
               <label for="email">Student Email Address</label>
@@ -83,18 +84,25 @@
               <label for="pass">Enter Password</label>
               <input type="password" name="pass" placeholder="Type password here" class="password">
               
-              <div>
-                <input type="checkbox" value="Remember me" class="remember-me"> Remember me
-                  <a href="#" style="float: right; margin-bottom: 5px;">Forget password</a>
+              <div class="input--checkbox">
+                <span class="input--check">
+                 <span class="small-check">
+
+                   <input type="checkbox" value="Remember me" class="remember-me">
+                 </span> 
+                  <p>Remember me</p>
+                </span>
+                  <a href="./forgot.html" style="float: right; margin-bottom: 5px;">Forget password</a>
               </div>
   
               <div>
-                  <input type="submit" value="Sign in" class="sub-btn">
-                  <p>Don't have an account yet? <a href="#signup" class="blue-txt">Sign up here</a></p>
+                  <button type="submit" value="Sign in" class="sub-btn log--in">Log in</button>  
+                  <p>Don't have an account yet? <a href="./signup.html" class="blue-txt">Sign up here</a></p>
               </div>
               
           </form>
       </div>
+   
        <!-- </main> -->
 
     <!-- Footer -->

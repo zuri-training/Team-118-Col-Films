@@ -207,8 +207,8 @@ Beginning of Header
 
   /* You can change this styles as you wish */
 }
-.form--login input {
-  border: 3px solid #8ecae6;
+.form--login input:focus {
+  border: 2px solid #8ecae6;
   outline: none;
 }
 .img-form-div {
@@ -244,7 +244,7 @@ Beginning of Header
 
 .form--login input {
   border-radius: 5px;
-  border: 1px solid #808080;
+  border: 2px solid #808080;
   height: 60px;
   padding-left: 8px;
   cursor: pointer;

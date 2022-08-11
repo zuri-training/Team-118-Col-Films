@@ -1,19 +1,65 @@
- {% load static %}
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    {% block meta_tags %}
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% endblock meta_tags %}
+<html lang="zxx" class="no-js">
 
-    <title>COREELS - Best Short Movies From College Students</title>
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'images/myfavicon.ico' %}">
+    <!-- Author Meta -->
+    <meta name="author" content="Zuri-Team-118">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>{% block title %} {% endblock %}</title>
+
+    <!-- CSS links ============================================= -->
+    {% load static %}
+<!--    <link rel="stylesheet" href="{% static 'css/main.css' %}">-->
 </head>
+
 <body>
+
+<!-- Header navigation section -->
+<!-- To be styled with css-->
+<header>
+    <nav class="navigation">
+        <div class="nav-content">
+            <div class="logo-box"><a href="#hero">Coreels logo</a></div>
+            <ul class="menu-items">
+                <div class="icn btn-cancel">
+                    <i class="fa fa-times"></i>
+                </div>
+                <li><a href="#menu1">#menu1</a></li>
+                <li><a href="#menu2">#menu2</a></li>
+                <li><a href="#menu3">#menu3</a></li>
+                <li><a href="#menu4">#menu4</a></li>
+            </ul>
+            <div class="icn btn-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- End of Header section -->
+
+<!--Main content section-->
+<div id="page-wrap">
     {% block content %}
-    <h1 style="text-align: center;">COREELS - Best Short Movies From College Students</h1>
-    {% endblock content %}
+    {% endblock %}
+</div>
+<!--End of main content section -->
+
+<!--Javascript links-->
+{% load static %}
+<!--<script src="{% static 'js/main.js' %}"></script>-->
+
+
 </body>
+
 </html>

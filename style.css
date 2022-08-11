@@ -231,7 +231,20 @@ nav {
       no-repeat;
   }
   .main-title {
-    max-width: 100vw;
+    max-width: 45vw;
+  }
+  .hero-input {
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    justify-content: center;
+    width: 45vw;
+  }
+  .hero-group {
+    display: grid;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 .help-info {

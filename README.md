@@ -12,13 +12,13 @@ This documentation is written for the frontend development of the Zuri project o
 
 #### THIS DOCUMENTATION REFERS TO THE FRONTEND OF THE PROJECT
 
-- [ ] The mobile and desktop screen of the signup page has been completed.
-- [ ] The mobile and desktop screen of the login page has been completed.
-- [ ] The mobile and desktop screen of the landing page has been completed.
-- [ ] The mobile and desktop screen of the team's page has been completed.
+- [x] The mobile and desktop screen of the signup page has been completed.
+- [x] The mobile and desktop screen of the login page has been completed.
+- [x] The mobile and desktop screen of the landing page has been completed.
+- [x] The mobile and desktop screen of the team's page has been completed.
 - [ ] The mobile and desktop screen of the profile page has not been completed.
-- [ ] The mobile and desktop screen of the upload page has not been completed.
-- [ ] The mobile and desktop screen of the verification page has been completed.
+- [x] The mobile and desktop screen of the upload page has not been completed.
+- [x] The mobile and desktop screen of the verification page has been completed.
 - [ ] The mobile and desktop screen of the upload page has not been completed.
 - [ ] The mobile and desktop screen of the explore page has not been completed.
 

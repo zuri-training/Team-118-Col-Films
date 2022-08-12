@@ -1,10 +1,27 @@
 # COREELS Project Documentation {frontend development}
 
-This documentation is written for the frontend development of the Zuri project of team 118.
+### THIS DOCUMENTATION REFERS TO THE FRONTEND OF THE PROJECT
+
+This documentation is written for the frontend development of the Zuri project of team 118 by Jeremiah Lateef.
 
 ## The website's hosting platform
 
 - The site is hosted on [Coreels](https://coreels-team-118.netlify.app/)
+
+## Completed Pages
+
+#### THIS DOCUMENTATION REFERS TO THE FRONTEND OF THE PROJECT
+
+- [ ] The mobile and desktop screen of the signup page has been completed.
+- [ ] The mobile and desktop screen of the login page has been completed.
+- [ ] The mobile and desktop screen of the landing page has been completed.
+- [ ] The mobile and desktop screen of the team's page has been completed.
+- [ ] The mobile and desktop screen of the profile page has not been completed.
+- [ ] The mobile and desktop screen of the upload page has not been completed.
+- [ ] The mobile and desktop screen of the verification page has been completed.
+- [ ] The mobile and desktop screen of the upload page has not been completed.
+- [ ] The mobile and desktop screen of the explore page has not been completed.
+
 
 ## Developers {developers}
 

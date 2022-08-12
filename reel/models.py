@@ -29,6 +29,10 @@ class Category(models.Model):
         return self.name
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d15bd6583a78c2b5127f64063edb17c3d5a05643
 # Hello Mr Festus, I'm thinking the reel model here is to serve as a store for the videos uploaded by the users,
 # if that is the case, i have made a few modifications since i will primarily be focusing this module.
 # The modifications i have made here are subject to your review
@@ -51,7 +55,11 @@ class Reel(models.Model):
     )
     cover_thumbnail = models.FileField(
         _("video cover"), upload_to="reels/cover", help_text=_("cover image"),
+<<<<<<< HEAD
         null=True, blank=True, validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png'])]
+=======
+        null=True, blank=True, validators = [FileExtensionValidator(allowed_extensions=['jpg','jpeg','png'])]
+>>>>>>> d15bd6583a78c2b5127f64063edb17c3d5a05643
     )
     video = models.FileField(
         _("video file"), upload_to='reels', max_length=100,
@@ -67,6 +75,10 @@ class Reel(models.Model):
 
     class Meta:
         ordering = ['-date_posted', 'title']
+<<<<<<< HEAD
+=======
+
+>>>>>>> d15bd6583a78c2b5127f64063edb17c3d5a05643
 
     def __str__(self) -> str:
         return self.title

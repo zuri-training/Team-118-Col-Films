@@ -9,7 +9,10 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
+<<<<<<< HEAD
 
+=======
+>>>>>>> d15bd6583a78c2b5127f64063edb17c3d5a05643
 import os
 from pathlib import Path
 from django.urls import reverse_lazy
@@ -77,7 +80,7 @@ ROOT_URLCONF = 'coreels.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -103,11 +106,19 @@ AUTH_USER_MODEL = 'user.UserModel'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+<<<<<<< HEAD
         'NAME': os.environ['DATABASE_NAME'],
         'USER': os.environ['DATABASE_USER'],
         'PASSWORD': os.environ['DATABASE_PASS'],
         # 'HOST': os.environ['DATABASE_HOST'],
         # 'PORT': int(os.environ['DATABASE_PORT']),
+=======
+        'NAME': 'coreels', 
+        'USER': 'postgres', 
+        'PASSWORD': 'nsikan01',
+        'HOST': '127.0.0.1', 
+        'PORT': '5432',
+>>>>>>> d15bd6583a78c2b5127f64063edb17c3d5a05643
     }
 }
 

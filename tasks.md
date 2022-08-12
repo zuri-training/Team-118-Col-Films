@@ -2,20 +2,13 @@
 
 Team 118 will use this file to track issues and tasks that have been assigned to them
 
-## Updated [tasks.md](tasks.md "Click to open tasks.md") as a guide for fellow team members Issues-16
+## Updated core backend scripts for Tasks Assigned To Issues-19
 
-This is a way to show my team members how to track and fix github issues assigned to them.
+I've added necessary comments for all updated scripts.
 
-- Cloned the repository
-- Created a new branch
-- Made changes to tasks.md
-- Commited my changes
-- pushed it to Github
+- Allow all users to view the different videos on the platform.
+- Restrict upload functionality to only registered and logged users.
+- Restrict video editing and deleting features to only the user that posted it.
+- Map registered users to the videos they uploaded such that if their accounts get deleted, all their videos get deleted along
 
-## worked on all aspect of user research
 
-- worked on empathy map
-- carried out competitive analysis
-- brainstormed features and pain points
-- documentation along side some team members
-- worked on the research objective and problem statement

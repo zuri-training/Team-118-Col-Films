@@ -6,11 +6,7 @@ from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-<<<<<<< HEAD
-from .models import Reel
-=======
 from .models import Reel 
->>>>>>> d15bd6583a78c2b5127f64063edb17c3d5a05643
 # Restricting certain permissions to only logged in and unigue users
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
@@ -23,30 +19,18 @@ def home(request):
     """
     return HttpResponse("<h1>COREELS HOMEPAGE</h1>")
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d15bd6583a78c2b5127f64063edb17c3d5a05643
 # Hello Mr Festus, you seem to prefer working with function based views, but i think class based views will
 # save us a tone of time, so i've made a few.
 
 class IndexView(ListView):
     model = Reel
-<<<<<<< HEAD
-    template_name = "test.html"
-=======
     template_name = "index.html"
->>>>>>> d15bd6583a78c2b5127f64063edb17c3d5a05643
     order_by = "-date_posted"
 
 
 class AboutView(TemplateView):
     template_name = "about.html"
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d15bd6583a78c2b5127f64063edb17c3d5a05643
 # Restricting the create video page to only logged in users
 class CreateVideo(LoginRequiredMixin, CreateView):
     model = Reel
@@ -65,10 +49,6 @@ class VideoDetail(DetailView):
     model = Reel
     template_name = "video_detail.html"
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d15bd6583a78c2b5127f64063edb17c3d5a05643
 # Restricting the update video page to only logged in users
 class UpdateVideo(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Reel
@@ -82,10 +62,6 @@ class UpdateVideo(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         video = self.get_object()
         return self.request.user == video.uploader
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d15bd6583a78c2b5127f64063edb17c3d5a05643
 # Restricting the delete video page to only logged in users
 class DeleteVideo(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Reel

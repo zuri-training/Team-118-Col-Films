@@ -453,6 +453,7 @@ Explore Section
 .tag-center {
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 30rem;

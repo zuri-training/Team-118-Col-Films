@@ -6,6 +6,9 @@ const menu = document.querySelector(".hamburger--btn");
 const overlay = document.querySelector(".overlay");
 const sidebar = document.querySelector(".sidebar");
 const closeButton = document.querySelector(".close");
+const profileButton = document.querySelectorAll(".arrow");
+const userSidebar = document.querySelectorAll(".user-sidebar");
+const arrowButtonOne = document.querySelectorAll(".arrow-button");
 
 // ********** set date ************
 // // select span
@@ -30,3 +33,26 @@ document.addEventListener("keydown", function (e) {
     closeModal();
   }
 });
+
+// ********** profile button ************
+profileButton.forEach((button) =>
+  button.addEventListener("click", function (e) {
+    const arrowButton = e.currentTarget;
+    if (arrowButton.classList.contains("down-button")) {
+      userSidebar.forEach((btn) => btn.classList.remove("user-sidebar-toggle"));
+
+      arrowButtonOne.forEach((btn) =>
+        btn.setAttribute("src", "./Images/icon-arrow-up.svg")
+      );
+      arrowButton.classList.remove("down-button");
+    } else {
+      userSidebar.forEach((btn) => btn.classList.add("user-sidebar-toggle"));
+
+      arrowButtonOne.forEach((btn) =>
+        btn.setAttribute("src", "./Images/icon-arrow-down.svg")
+      );
+
+      arrowButton.classList.add("down-button");
+    }
+  })
+);

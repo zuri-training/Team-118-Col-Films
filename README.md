@@ -1,5 +1,4 @@
-
-## # COREELS Project Documentation {frontend development}
+# COREELS Project Documentation {frontend development}
 
 ### THIS DOCUMENTATION REFERS TO THE FRONTEND OF THE PROJECT
 
@@ -22,6 +21,8 @@ This documentation is written for the frontend development of the Zuri project o
 - [x] The mobile and desktop screen of the verification page has been completed.
 - [ ] The mobile and desktop screen of the upload page has not been completed.
 - [ ] The mobile and desktop screen of the explore page has not been completed.
+
+## Developers {developers}
 
 This repository is built by Jeremiah Lateef for the Zuri Project. Other participants may contribute to the project in the future.
 

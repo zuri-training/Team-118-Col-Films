@@ -27,6 +27,8 @@ This documentation is written for the frontend development of the Zuri project o
 This repository is built by Jeremiah Lateef for the Zuri Project. Other participants may contribute to the project in the future.
 
 - **Precious Worukwo** built the signup page.
+- **Precious Worukwo** built the verification page.
+
 - **Precious Worukwo's** [repository](https://github.com/Preciousglows/Team-118-Col-Films-Precious) contains the sign-up page. It has been integrated into the repo.
 - **Joshua Ekwonye** built the login page.
 - **Joshua Ekwonye's** [repository](https://github.com/iamjooshua/Team-118-Col-Films/tree/main/Team-118-Col-Films-21-frontend-development-Login-Page) contains the login page. It has been added to the repository.

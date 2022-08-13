@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Register Form START -->
+<main>
+    <h1>Create New Coreels Account</h1>
+    <div>
+        <form action="{% url 'register' %}" method="post" enctype="multipart/formdata">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">
+                Create Account
+            </button>
+        </form>
+    </div>
+</main>
+<!-- Register Form END -->
+{% endblock content %}

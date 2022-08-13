@@ -1,21 +1,39 @@
 # COREELS Project Documentation {frontend development}
 
-This documentation is written for the frontend development of the Zuri project of team 118.
+### THIS DOCUMENTATION REFERS TO THE FRONTEND OF THE PROJECT
+
+This documentation is written for the frontend development of the Zuri project of team 118 by Jeremiah Lateef.
 
 ## The website's hosting platform
 
 - The site is hosted on [Coreels](https://coreels-team-118.netlify.app/)
 
+## Completed Pages
+
+#### THIS DOCUMENTATION REFERS TO THE FRONTEND OF THE PROJECT
+
+- [x] The mobile and desktop screen of the signup page has been completed.
+- [x] The mobile and desktop screen of the login page has been completed.
+- [x] The mobile and desktop screen of the landing page has been completed.
+- [x] The mobile and desktop screen of the team's page has been completed.
+- [ ] The mobile and desktop screen of the profile page has not been completed.
+- [x] The mobile and desktop screen of the upload page has not been completed.
+- [x] The mobile and desktop screen of the verification page has been completed.
+- [ ] The mobile and desktop screen of the upload page has not been completed.
+- [ ] The mobile and desktop screen of the explore page has not been completed.
+
 ## Developers {developers}
 
 This repository is built by Jeremiah Lateef for the Zuri Project. Other participants may contribute to the project in the future.
+
 - **Precious Worukwo** built the signup page.
 - **Precious Worukwo's** [repository](https://github.com/Preciousglows/Team-118-Col-Films-Precious) contains the sign-up page. It has been integrated into the repo.
-- **Joshua Ekwonye** built the login page. 
-- **Joshua Ekwonye's** [repository](https://github.com/iamjooshua/Team-118-Col-Films/tree/main/Team-118-Col-Films-21-frontend-development-Login-Page) contains the login page. It has been added to the repository. 
+- **Joshua Ekwonye** built the login page.
+- **Joshua Ekwonye's** [repository](https://github.com/iamjooshua/Team-118-Col-Films/tree/main/Team-118-Col-Films-21-frontend-development-Login-Page) contains the login page. It has been added to the repository.
 
 ## Branches
-- The [Frontend-Development](https://github.com/jeremiahlateef/Team-118-Col-Films-21/tree/frontend-development-Jeremiah-%2321) branch contains the template for the header and footer of the mobile and desktop screens I built for all the pages. 
+
+- The [Frontend-Development](https://github.com/jeremiahlateef/Team-118-Col-Films-21/tree/frontend-development-Jeremiah-%2321) branch contains the template for the header and footer of the mobile and desktop screens I built for all the pages.
 
 ## License {license}
 

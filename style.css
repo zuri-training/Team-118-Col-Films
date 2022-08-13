@@ -7,7 +7,7 @@ Global Styles
 =================
 */
 :root {
-  --color-style-1: #ffffff;
+  --color-style-1: #f2f2f2;
   --color-style-2: #011119;
   --color-style-3: #8ecae6;
   --color-style-4: #f2f2f2;
@@ -43,7 +43,7 @@ input {
   font-family: var(--font-family-2);
 }
 body {
-  background: var(--color--4);
+  background: var(--color-style-1);
   line-height: 1.5;
   font-size: 0.875rem;
   overflow-x: hidden;

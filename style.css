@@ -328,9 +328,6 @@ Trending Section
   background: var(--color-style-10);
 }
 .trending-center {
-  /* justify-content: space-evenly; */
-  /* margin-bottom: 1.5rem; */
-  /* max-width: 768px; */
   margin-right: auto;
   margin-left: auto;
 }

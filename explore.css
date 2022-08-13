@@ -436,6 +436,99 @@ Explore
     display: inline-flex;
   }
 }
+.explore-section-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+.explore-card-design {
+  background: var(--color-style-4);
+  border-radius: 0.375rem;
+  max-width: 50%;
+  max-height: 50%;
+  margin-bottom: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.explore-video-container {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.trendy {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.explore-card-title,
+.explore-card-info {
+  font-family: var(--font-family-2);
+  line-height: 22px;
+  padding: 0px 4px;
+}
+.explore-card-title {
+  font-size: 0.75rem;
+}
+.explore-card-info {
+  font-size: 0.56rem;
+}
+
+@media screen and (min-width: 375px) {
+  .explore-section-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  .explore-card-design {
+    flex: 0 0 calc(33.33% - 1rem);
+  }
+}
+@media screen and (min-width: 768px) {
+  .explore-section-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .explore-card-design {
+    flex: 0 0 calc(25% - 1rem);
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .explore-card-design {
+    flex: 0 0 calc(20% - 1rem);
+    /* gap: 1rem; */
+  }
+
+  .explore-section-center {
+    max-width: 1170px;
+    justify-content: center;
+  }
+  .home-buttons {
+    width: 13rem;
+  }
+}
+/* 
+=================
+End of Explore landing page
+=================
+*/
+/* 
+=================
+Explore Release Section
+=================
+*/
+.explore-title-button,
+.explore-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* 
 =================
 End of Explore

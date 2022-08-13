@@ -63,62 +63,54 @@
             </ul>
           </div>
           <div class="signing">
-         <a href="signin.html">  <button class="btn btn--1" id="btn--1">Sign up</button></a> 
-          <a href="./login.html"><button class="btn btn--2" id="btn--2">Login</button></a> 
+          <a href="./signup.html"><button class="btn btn--2" id="btn--2">Sign up</button></a> 
           </div>
         </div>
       </nav>      
     </header>
     <!-- End of Header -->
     <!-- Main -->
+ 
+        <div id="login-form">
 
-     <!-- Main -->
-
-       <main class="login-page">
-        <div class="img-form-div">
-          <div class="mob-login-img">
-            <img src="./Images/Mobile login-bro 1.svg" alt="">
-          </div>
-
-            <div>
-              <form action="" class="form">
-                <h1>Sign up here</h1>
-                <label for="">Full name</label>
-                <input type="text" placeholder="Type full name here">
-    
-                <label for="">Student email address</label>
-                <input type="text" placeholder="Enter email address here">
-    
-                <label for="">Enter password</label>
-                <input type="password" placeholder="Type password here">
-    
-                <label for="">Confirm password</label>
-                <input type="password" placeholder="Type password here again">
-    
-                <label for="" class="col-id">College ID </label>
-                  
-                  <label for="file" class="label-file">
-                    <input type="file" class="id-file" >
-                    Upload</label>
+          <img src="Images/tablet-login/pana.svg"class="login--image" alt=""> 
+          <form action="" id="form--login">
+    <h1 class="login-title">Welcome Back!</h1>
               
-                <label for="checkbox" class="checkbox">
-                  <input type="checkbox" style="height:20px; width: 30px;">
-                  I agree to the <span>Terms & Conditions </span> and <span> Privacy Policy</span>.</label>
-            
-                <button>Sign up</button>
-            </form>
-            </div>
-         
-        </div>
-        
-       </main>
-    <!-- End of Main -->
+              <label for="email">Student Email Address</label>
+              <input type="email" name="email" placeholder="Enter email address here" class="email" required>
+  
+              <label for="pass">Enter Password</label>
+              <input type="password" name="pass" placeholder="Type password here" class="password" required>
+              
+              <div class="input--checkbox">
+                <span class="input--check">
+                 <span class="small-check">
+
+                   <input type="checkbox" value="Remember me" class="remember-me" required>
+                 </span> 
+                  <p>Remember me</p>
+                </span>
+                  <a href="./forgot.html" style="float: right; margin-bottom: 5px;">Forget password</a>
+              </div>
+  
+              <div>
+                  <button type="submit" value="Sign in" class="sub-btn log--in">Log in</button>  
+                  <p>Don't have an account yet? <a href="./signup.html" class="blue-txt">Sign up here</a></p>
+              </div>
+              
+          </form>
+      </div>
+   
+       <!-- </main> -->
+
     <!-- Footer -->
 
-    <footer class="footer-container">
+   <footer class="footer-container">
       <div class="mobile-footer-center">
        <h2 class="footer-title mobile-title">coreels</h2>
-    <div class="icons mobile-icons">
+      
+          <div class="icons mobile-icons">
             <div class="icons-container">
               <a href="#" target="_blank">
                 <img
@@ -186,9 +178,9 @@
             </form>
             <button class="btn email-btn mobile-news" id="email-btn">Submit email</button>
         </div>
-          <div class="mobile-bottom">
+          <div class="mobile-bottom foot-bot">
              <div>
-          <span class="footer-bottom">
+          <span class="footer-bottom foot-bot">
             <h4>
               &copy;
               <span class="company">coreels</span> <span id="date"></span></span>              
@@ -280,7 +272,7 @@
            <a href="./team.html"><li class="links foot" id="scroll-link">our team</li></a>
            <a href="./about.html"><li class="links foot" id="scroll-link">about</li></a> 
            <a href="./contact.html"><li class="links foot" id="scroll-link">contact us</li></a> 
-           <a href="./signin.html"><li class="links foot" id="scroll-link">sign in</li></a>           
+           <a href="./signup.html"><li class="links foot" id="scroll-link">sign in</li></a>           
            
             </ul>
         </div>
@@ -300,7 +292,7 @@
             <button class="btn email-btn" id="email-btn">Submit email</button>
         </div>
        </div>
-        <div class="footer-header">
+        <div class="footer-header foot-bot">
           <div>
           <span class="footer-bottom">
             <h4>
@@ -319,9 +311,7 @@
             <span class="world-cont">
               <img src="./Images/world.svg" alt="atlas logo" class="atlas">
             </span>
-            <p>English</p>
-
-          </div>
+            <p>English</p>          
         </div>
       </div>
    
@@ -341,8 +331,7 @@
            <a href="./about.html"><li class="links side-links" id="scroll-link">about</li></a> 
            <a href="./contact.html"><li class="links side-links" id="scroll-link">contact us</li></a> 
             </ul>
-             <a href="signin.html">  <button class="btn btn--1 side-btn" id="btn--1">Sign up</button></a> 
-          <a href="./login.html"><button class="btn btn--2 side-btn" id="btn--2">Login</button></a>
+          <a href="./signup.html"><button class="btn btn--2 side-btn" id="btn--2">Sign up</button></a> 
             
     </aside>
     <!-- Aside -->

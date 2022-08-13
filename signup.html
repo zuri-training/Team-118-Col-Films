@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./signup.css">
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -62,24 +63,59 @@
             </ul>
           </div>
           <div class="signing">
-         <a href="signin.html">  <button class="btn btn--1" id="btn--1">Sign up</button></a> 
-          <a href="./login.html"><button class="btn btn--2" id="btn--2">Login</button></a> 
+          <a href="./login.html"><button class="btn btn--2" id="btn--2">Log in</button></a> 
           </div>
         </div>
       </nav>      
     </header>
     <!-- End of Header -->
     <!-- Main -->
+<main class="signup-page">
+        <div class="img-form-div">
+          <div class="mob-login-img">
+            <img src="./Images/Mobile login-bro 1.svg" alt="">
+          </div>
 
-       <main class="main">
-         <section class="section"></section>
-        </main>
+            <div>
+              <form action="" class="form--login">
+                <h1>Sign up here</h1>
+                <label for="">Full name</label>
+                <input type="text" placeholder="Type full name here" class="input--border">
+    
+                <label for="">Student email address</label>
+                <input type="email" placeholder="Enter email address here" required class="input--border">
+    
+                <label for="">Enter password</label>
+                <input type="password" placeholder="Type password here" class="input--border" required>
+    
+                <label for="">Confirm password</label>
+                <input type="password" placeholder="Type password here again" class="input--border" required>
+    
+                <label for="" class="col-id">College ID </label>
+                  
+                  <label for="file" class="label-file">
+                    <input type="file" class="id-file" class="input--border" required>
+                    Upload</label>
+              
+                <label for="checkbox" class="checkbox">
+                  <input type="checkbox" class="input--border" style="height:20px; width: 30px;" required>
+                  I agree to the <span class="signup-terms">Terms & Conditions </span>  and <span class="signup-terms"> Privacy Policy.</span></label>
+            
+                <button class="signup--button">Sign up</button>
+            </form>
+            </div>
+         
+        </div>
+        
+       </main>
+<!-- End of main -->
+     
     <!-- Footer -->
-
-    <footer class="footer-container">
+<footer class="footer-container">
       <div class="mobile-footer-center">
        <h2 class="footer-title mobile-title">coreels</h2>
-    <div class="icons mobile-icons">
+      
+          <div class="icons mobile-icons">
             <div class="icons-container">
               <a href="#" target="_blank">
                 <img
@@ -147,9 +183,9 @@
             </form>
             <button class="btn email-btn mobile-news" id="email-btn">Submit email</button>
         </div>
-          <div class="mobile-bottom">
+          <div class="mobile-bottom foot-bot">
              <div>
-          <span class="footer-bottom">
+          <span class="footer-bottom foot-bot">
             <h4>
               &copy;
               <span class="company">coreels</span> <span id="date"></span></span>              
@@ -261,7 +297,7 @@
             <button class="btn email-btn" id="email-btn">Submit email</button>
         </div>
        </div>
-        <div class="footer-header">
+        <div class="footer-header foot-bot">
           <div>
           <span class="footer-bottom">
             <h4>
@@ -280,14 +316,11 @@
             <span class="world-cont">
               <img src="./Images/world.svg" alt="atlas logo" class="atlas">
             </span>
-            <p>English</p>
-
-          </div>
+            <p>English</p>          
         </div>
       </div>
    
     </footer>
-    <!-- End of Footer -->
     <!-- Aside -->
 
     <aside class="sidebar sidebar-close ">
@@ -302,8 +335,7 @@
            <a href="./about.html"><li class="links side-links" id="scroll-link">about</li></a> 
            <a href="./contact.html"><li class="links side-links" id="scroll-link">contact us</li></a> 
             </ul>
-             <a href="signin.html">  <button class="btn btn--1 side-btn" id="btn--1">Sign up</button></a> 
-          <a href="./login.html"><button class="btn btn--2 side-btn" id="btn--2">Login</button></a>
+          <a href="./login.html"><button class="btn btn--2 side-btn" id="btn--2">Log in</button></a>
             
     </aside>
     <!-- Aside -->

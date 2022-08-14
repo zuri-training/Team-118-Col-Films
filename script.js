@@ -56,3 +56,20 @@ profileButton.forEach((button) =>
     }
   })
 );
+
+// ********** icon buttons ************
+const like = document.getElementById("like");
+const dislike = document.getElementById("dislike");
+const save = document.getElementById("bookmark");
+
+like.addEventListener("click", function (e) {
+  const likeButton = e.currentTarget;
+  if (!likeButton.classList.contains("btn-like")) {
+    likeButton.classList.add("btn-like");
+    like.innerHTML = '<i class="fa-solid fa-thumbs-up"></i>';
+    dislike.innerHTML = '<i class="fa-regular fa-thumbs-down"></i>';
+  } else if (dislike) {
+    like.innerHTML = '<i class="fa-regular fa-thumbs-up"></i>';
+    dislike.innerHTML = '<i class="fa-solid fa-thumbs-down"></i>';
+  }
+});

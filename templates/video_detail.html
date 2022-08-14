@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+
+{% block head %} 
+<title>Ivideo|create-video</title>
+{% endblock %}
+
+{% block body %} 
+
+{% load static %}
+<main>
+    <h1 style="color: green;">
+        GeeksforGeeks
+    </h1> 
+      
+    <h2> 
+        How to insert video 
+        and play in HTML
+    </h2> 
+  
+    <p> 
+        {{object.id}}
+    <p> 
+        <!-- <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+          </video> -->
+    <video width="500px" height="500px" controls> 
+          
+        <source src="/media/{{object.vid_file}}" 
+            type="video/mp4"> 
+    </video> 
+    <img src="/media/{{object.cover_thumbnail}}" width="300" height="300"	/>
+
+    {% if object.uploader == user %}
+    <a href="{% url 'update-video' object.id %}">Edit<i class="fa fa-pencil fa-2x"></i></a>
+    <a href="{% url 'delete-video' object.id %}">Delete<i class="fa fa-trash-o fa-2x"></i></a>
+    {% endif %}
+</main>
+{% endblock %}

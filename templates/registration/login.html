@@ -1,19 +1,35 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+{% endblock extra_css %}
+
 {% block content %}
 <!-- Login Form START -->
-<main>
-    <h1>Login to Coreels Account</h1>
-    <div>
-        <form action="{% url 'login' %}" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">
-                Login
-            </button>
-        </form>
-    </div>
-</main>
-<!-- Login Form END -->
+<div id="login-form">
+    <img src="{% static 'images/tablet-login/pana.svg' %}" class="login--image" alt=""> 
+    <form action="" id="form--login">
+        <h1 class="login-title">Welcome Back!</h1>
+        <label for="email">Student Email Address</label>
+        <input type="email" name="email" placeholder="Enter email address here" class="email" required>
+        <label for="pass">Enter Password</label>
+        <input type="password" name="pass" placeholder="Type password here" class="password" required>
+        <div class="input--checkbox">
+          <span class="input--check">
+           <span class="small-check">
+            <input type="checkbox" value="Remember me" class="remember-me" required>
+           </span> 
+            <p>Remember me</p>
+          </span>
+            <a href="{% url 'password_reset' %}" style="float: right; margin-bottom: 5px;">Forgot password?</a>
+        </div>
+        <div>
+            <button type="submit" value="Sign in" class="sub-btn log--in">Log in</button>  
+            <p>Don't have an account yet? <a href="{% url 'register' %}" class="blue-txt">Sign up here</a></p>
+        </div>
+        
+    </form>
+</div>
+ <!-- Login Form STAENDRT -->
 {% endblock content %}

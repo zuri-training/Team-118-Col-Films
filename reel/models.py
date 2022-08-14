@@ -1,3 +1,4 @@
+from distutils.util import convert_path
 from django.db import models
 from django.conf import settings
 from django.core.validators import FileExtensionValidator
@@ -24,50 +25,51 @@ class Category(models.Model):
         ordering = ['-date', 'name']
         verbose_name_plural = 'categories'
 
-
     def __str__(self) -> str:
         return self.name
 
 
 class Reel(models.Model):
     """Represents each reel/short video in collection"""
-
-    user = models.ForeignKey(
+    uploader = models.ForeignKey(
         settings.AUTH_USER_MODEL, verbose_name=_("uploaded by"),
         on_delete=models.CASCADE
     )
-    name = models.CharField(
-        _("video title"), max_length=255, help_text=_("enter video short name")
+    title = models.CharField(
+        _("video title"), max_length=255,
+        help_text=_("Enter a title for your short video")
     )
     description = models.TextField(
-        _("long description"), help_text=_("long video description")
+        _("long description"), 
+        help_text=_("Enter a description for your short video")
     )
     category = models.ManyToManyField(
         Category, verbose_name=_("video category"),
-        help_text=_("choose video category")
+        help_text=_("choose a category for your short video")
     )
-    cover = models.ImageField(
+    cover_thumbnail = models.FileField(
         _("video cover"), upload_to="reels/cover", help_text=_("cover image"),
-        null=True, blank=True
+        null=True, blank=True, validators=[
+            FileExtensionValidator(allowed_extensions=['jpg','jpeg','png'])
+        ]
     )
     video = models.FileField(
         _("video file"), upload_to='reels', max_length=100,
         help_text=_("upload short video file less than 15 minutes"),
         validators=[FileExtensionValidator(allowed_extensions=[
-            'MOV','avi','mp4','webm','mkv'
+            'MOV', 'avi', 'mp4', 'webm', 'mkv'
         ])]
     )
-    date = models.DateTimeField(
+    date_posted = models.DateTimeField(
         _("date uploaded"), default=timezone.now,
         help_text="date video was uploaded"
     )
 
     class Meta:
-        ordering = ['-date', 'name']
-
+        ordering = ['-date_posted', 'title']
 
     def __str__(self) -> str:
-        return self.name
+        return self.title
 
 
 class Comment(models.Model):
@@ -92,7 +94,6 @@ class Comment(models.Model):
     class Meta:
         ordering = ['-date', 'user']
 
-
     def __str__(self) -> str:
         return f"{self.user} commented on: {self.real}"
 
@@ -115,7 +116,6 @@ class Favorite(models.Model):
 
     class Meta:
         ordering = ['-date', 'user']
-
 
     def __str__(self) -> str:
         return f"{self.user} favorited: {self.real}"
@@ -140,7 +140,6 @@ class Like(models.Model):
     class Meta:
         ordering = ['-date', 'user']
 
-
     def __str__(self) -> str:
         return f"{self.user} liked: {self.real}"
 
@@ -164,7 +163,6 @@ class Dislike(models.Model):
     class Meta:
         ordering = ['-date', 'user']
 
-
     def __str__(self) -> str:
         return f"{self.user} disliked: {self.real}"
 
@@ -187,7 +185,6 @@ class View(models.Model):
 
     class Meta:
         ordering = ['-date', 'user']
-
 
     def __str__(self) -> str:
         return f"{self.user} viewed: {self.real}"

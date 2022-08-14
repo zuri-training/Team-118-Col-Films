@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+
+{% block head %} 
+<title>Ivideo|Index</title>
+{% endblock %}
+
+{% block body %} 
+<main>
+   <div class="container">
+        <div class="row justify-content-center">
+            {% for object in object_list %}
+            <div class="card col-md-7 col-sm-12 mr-md-2 mt-5 p-3 border-0">
+                <a href="{% url 'video-detail' object.id %}"><img src="/media/{{object.cover_thumbnail}}" width="300" height="300"></a>
+                <div class="card-body">
+                    <a class="link-text" href="{% url 'video-detail' object.id %}"> <h6 class="text-center">{{ object.title }}</h6></a>
+                    <p class="text-center text-muted m-0">{{ object.uploader }}</p>
+                    <p class="text-center text-muted">{{ object.date_posted | date:"M d, Y" }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+   </div>
+  </main>
+{% endblock %}

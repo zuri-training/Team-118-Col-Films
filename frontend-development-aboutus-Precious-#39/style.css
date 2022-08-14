@@ -161,119 +161,139 @@ End of Header
 =================
 */
 .main {
-  background: var(--color-style-4);
-  
+  font-family: var(--font-family-1);
+  background-color: #f2f2f2;
   /* You can change this styles as you wish */
 }
-.img-form-div{
-  display: flex;
-  width: 90%;
-  margin: auto;
-  padding-top: 40px;
-  
+
+.section-ellipse{
+  min-height: 90vh;
+  background-color: #FFE7AB;
+  position: relative;
 }
 
-.mob-login-img img{
-  height: 600px;
-  
-}
-.form{
-  margin-left: 80px;
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
-  gap: 10px;
-  color: var(--color-style-8);
-  height: 80%;
-}
-
-.form h1{
-  font-family: 'Arima Madurai', cursive;
-  font-size: 54px;
-  color: var(--color-style-2);
+.section-ellipse h1{
   text-align: center;
+  color: #072026;
+  line-height: 60px;
+  font-size: 44px;
+  padding: 10px;
 }
 
-.form input{
-  border-radius: 5px;
-  border: 1px solid #808080;
-  height: 60px;
-  padding-left: 8px;
-  cursor: pointer;
-  background-color: transparent;
+.custom-shape-divider-bottom-1660298616 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
-
-
-.form input[type="file"]{
-  border: none;
-}
-.id-file{
-  color: transparent; 
-}
-
-.id-file::-webkit-file-upload-button{
-  border: none;
-  cursor: pointer;
-  visibility: hidden;
- 
+.custom-shape-divider-bottom-1660298616 svg {
+  position: relative;
+  display: block;
+  width: calc(121% + 1.3px);
+  height: 109px;
+  transform: rotateY(180deg);
 }
 
-.id-file::before{
-  content: 'Upload college identity card here';
-  display: inline-block;
-  cursor: pointer;
-  color: var(--color-style-8);
-  padding-top: 8px;
+.custom-shape-divider-bottom-1660298616 .shape-fill {
+  fill: #f2f2f2;
 }
 
-.label-file{
-  cursor: pointer;
-  border: 1px solid #808080;
-  border-radius: 8px;
-  height: 40px;
-  flex-direction: column;
-  color: var(--color-style-2);
-}
-
-.checkbox{
+.division{
   display: flex;
+  padding: 5px 30px;
+  margin-bottom: 30px;
 }
 
-.form button{
-  background-color: var(--color-style-5);
-  border: none;
-  border-radius: 8px;
-  height: 60px;
-  color: var(--color-style-2);
-  font-family: 'Archivo';
-  font-weight: 400;
-  margin-top: 12px;
+.division img{
+  width: 600px;
+  padding: 10px;
+  margin-bottom: 50px;
+  margin-left: 1rem;
 }
 
-.form button:hover{
-  cursor: pointer;
-  border: 1px solid #219ebc;
-  background-color: transparent;
-  transition: var(--transition);
+.division-paragraph{
+  width: 570px;
+  justify-content: center;
+  align-content: center;
+  padding: 30px;
 }
 
-span{
-  color: var(--color-style-3);
+.division-paragraph p{
+  padding: 30px;
+  font-family: var(--font-family-1);
+  font-size: 18px;
 }
 
-@media screen and (max-width: 920px){
-  .mob-login-img{
-    display: none;
-  }
 
-  .form{
-    width: 100%;
-    margin-top: 50px;
-  }
+.section-mission{
+  height: 90vh;
+  background-color: #f2f2f2;
+}
 
-  
+.container-img-par{
+  font-size: 18px;
+  line-height: 36px;
+  font-family: var(--font-family-1);
+  width: 70%;
+  padding: 20px;
+  margin-left: 20%;
+}
 
+.container-img-par p{
+  padding-bottom: 20px;
+  font-family: var(--font-family-1);
+}
+
+
+
+.division-two{
+  display: flex;
+  padding: 5px 30px;
+
+}
+
+.mission-img{
+  width: 700px;
+}
+.section-mission h1{
+  text-align: center;
+  color: #072026;
+  line-height: 62px;
+  font-size: 44px;
+  padding: 10px;
+
+}
+
+.section-goals{
+  height: 90vh;
+}
+.division-three{
+  display: flex;
+  padding: 5px 30px;
+
+}
+
+.section-goals h1{
+  text-align: center;
+  color: #072026;
+  line-height: 62px;
+  font-size: 44px;
+  padding: 10px;
+
+}
+
+
+.goals-par p{
+  padding: 20px;
+  font-family: var(--font-family-1);
+  font-size: 18px;
+}
+
+.goals-img{
+ width: 60%;
 }
 
 /* 

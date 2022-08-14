@@ -136,3 +136,8 @@ coreels.zip
 old-requirements.txt
 coreels.code-workspace
 test-data/
+reformat.html
+
+# VSCode Files
+.vscode/
+*/code-workspace

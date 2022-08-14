@@ -1,0 +1,262 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<script src="https://kit.fontawesome.com/ed99df9468.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{% static 'css/explore.css' %}" />
+{% endblock extra_css %}
+
+{% block title %}
+<title>Explore Coreels Movie Collections</title>
+{% endblock title %}
+
+{% block content %}
+<!-- Explore page START -->
+<main class="explore-main">
+    <article class="explore-header--center">
+      <div class="explore-center">
+        <div></div>
+        <div class="explore-header mobile-explore-header">
+          <div class="mobile-explore-user">
+            <div>
+              <div class="notify-bell">
+                <span class="icon-color">
+                  <i class="fa-regular fa-bell fa-2x"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="user-info-cont">
+              <div class="user-profile-cont">
+                <div class="user-image-cont">
+                  <img
+                    src="{% static 'images/user-image.svg' %}"
+                    alt="user profile image"
+                    class="user-image"
+                  />
+                </div>
+                <div class="user-name">
+                  <h6>Daniel Amir</h6>
+                </div>
+                <div class="profile-button">
+                  <button class="arrow down-button">
+                    <img
+                      src="{% static 'images/icon-arrow-down.svg' %}"
+                      alt="arrow-down"
+                      class="arrow-button"
+                    />
+                  </button>
+                  <ul class="user-sidebar user-sidebar-toggle">
+                    <a href="#"><li class="user-links">Following</li></a>
+                    <a href="#"><li class="user-links">My playlist</li></a>
+                    <a href="#"><li class="user-links">Watch later</li></a>
+                    <a href="#"><li class="user-links">Downloads</li></a>
+                    <a href="#"><li class="user-links">Profile settings</li></a>
+                    <a href="#"><li class="user-links">Sign out</li></a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-explore">
+            <div class="form-cont form-cont-big">
+              <form action="" class="form-group">
+                <input
+                  type="text"
+                  name="search"
+                  class="explore-search"
+                  id="search-button"
+                  required
+                  placeholder="search here"
+                />
+                <input
+                  type="text"
+                  name="search"
+                  class="explore-search-big"
+                  id="search-button"
+                  required
+                  placeholder="search for songs, lyrics, artist..."
+                />
+              </form>
+              <div class="small-search-icon">
+                <img src="{% static 'images/filter-small.svg' %}" alt="filter" />
+              </div>
+              <div class="big-search-icon">
+                <img src="{% static 'images/filter.svg' %}" alt="filter" />
+              </div>
+            </div>
+            <div class="mobile-explore-user-big">
+              <div>
+                <div class="notify-bell">
+                  <span class="icon-color">
+                    <i class="fa-regular fa-bell fa-2x"></i>
+                  </span>
+                </div>
+              </div>
+  
+              <div class="user-info-cont">
+                <div class="user-profile-cont">
+                  <div class="user-image-cont">
+                    <img
+                      src="{% static 'images/user-image.svg' %}"
+                      alt="user profile image"
+                      class="user-image"
+                    />
+                  </div>
+                  <div class="user-name">
+                    <h6>Daniel Amir</h6>
+                  </div>
+                  <div class="profile-button">
+                    <button class="arrow down-button">
+                      <img
+                        src="{% static 'images/icon-arrow-down.svg' %}"
+                        alt="arrow-down"
+                        class="arrow-button"
+                      />
+                    </button>
+                    <ul class="user-sidebar user-sidebar-toggle">
+                      <a href="#"><li class="user-links">Following</li></a>
+                      <a href="#"><li class="user-links">My playlist</li></a>
+                      <a href="#"><li class="user-links">Watch later</li></a>
+                      <a href="#"><li class="user-links">Downloads</li></a>
+                      <a href="#"><li class="user-links">Profile settings</li></a>
+                      <a href="#"><li class="user-links">Sign out</li></a>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="explore-tag-center-header">
+      <div class="content">
+        <div class="explore-tag-center">
+          <div class="tag-button">
+            <a href="#"><button class="explore-tags">Art gallery</button></a>
+          </div>
+          <div class="tag-button small-explore-tag">
+            <a href="#"><button class="explore-tags">Science & tech</button></a>
+          </div>
+          <div class="tag-button">
+            <a href="#"><button class="explore-tags">campaign</button></a>
+          </div>
+          <div class="tag-button small-explore-tag">
+            <a href="#"><button class="explore-tags">campaign</button></a>
+          </div>
+          <div class="tag-button small-explore-tag">
+            <a href="#"><button class="explore-tags">documentaries</button></a>
+          </div>
+          <div class="tag-button small-explore-tag">
+            <a href="#"><button class="explore-tags">fashion</button></a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <section class="explore-landing-page">
+      <div class="explore-landing-center">
+        <div class="explore-section-center">
+          <article class="explore-card-design">
+            <div class="explore-video-container">
+              <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+            </div>
+            <h4 class="explore-card-title">Reading habits</h4>
+            <p class="explore-card-info">By: Jemimah Ameobi</p>
+          </article>
+          <article class="explore-card-design">
+            <div class="explore-video-container">
+              <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+            </div>
+            <h4 class="explore-card-title">Reading habits</h4>
+            <p class="explore-card-info">By: Jemimah Ameobi</p>
+          </article>
+          <article class="explore-card-design">
+            <div class="explore-video-container">
+              <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+            </div>
+            <h4 class="explore-card-title">Reading habits</h4>
+            <p class="explore-card-info">By: Jemimah Ameobi</p>
+          </article>
+          <article class="explore-card-design">
+            <div class="explore-video-container">
+              <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+            </div>
+            <h4 class="explore-card-title">Reading habits</h4>
+            <p class="explore-card-info">By: Jemimah Ameobi</p>
+          </article>
+          <article class="explore-card-design">
+            <div class="explore-video-container">
+              <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+            </div>
+            <h4 class="explore-card-title">Reading habits</h4>
+            <p class="explore-card-info">By: Jemimah Ameobi</p>
+          </article>
+          <article class="explore-card-design">
+            <div class="explore-video-container">
+              <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+            </div>
+            <h4 class="explore-card-title">Reading habits</h4>
+            <p class="explore-card-info">By: Jemimah Ameobi</p>
+          </article>
+          <article class="explore-card-design">
+            <div class="explore-video-container">
+              <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+            </div>
+            <h4 class="explore-card-title">Reading habits</h4>
+            <p class="explore-card-info">By: Jemimah Ameobi</p>
+          </article>
+          <article class="explore-card-design">
+            <div class="explore-video-container">
+              <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+            </div>
+            <h4 class="explore-card-title">Reading habits</h4>
+            <p class="explore-card-info">By: Jemimah Ameobi</p>
+          </article>
+          <article class="explore-card-design">
+            <div class="explore-video-container">
+              <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+            </div>
+            <h4 class="explore-card-title">Reading habits</h4>
+            <p class="explore-card-info">By: Jemimah Ameobi</p>
+          </article>
+          <article class="explore-card-design">
+            <div class="explore-video-container">
+              <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+            </div>
+            <h4 class="explore-card-title">Reading habits</h4>
+            <p class="explore-card-info">By: Jemimah Ameobi</p>
+          </article>
+          <article class="explore-card-design">
+            <div class="explore-video-container">
+              <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+            </div>
+            <h4 class="explore-card-title">Reading habits</h4>
+            <p class="explore-card-info">By: Jemimah Ameobi</p>
+          </article>
+          <article class="explore-card-design">
+            <div class="explore-video-container">
+              <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+            </div>
+            <h4 class="explore-card-title">Reading habits</h4>
+            <p class="explore-card-info">By: Jemimah Ameobi</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="explore-trending-section">
+      <div class="explore-trending-section-center">
+        <div class="explore-title-button">
+          <div class="section-title explore-sec"><h2>New releases</h2></div>
+          <div>
+            <a href="./trending.html"
+              ><button class="explore-button home-buttons">See more</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+<!-- Explore page END -->
+{% endblock content %}

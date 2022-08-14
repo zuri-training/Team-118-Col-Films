@@ -1,69 +1,300 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="zxx" class="no-js">
+<html lang="en">
 
-<<<<<<< HEAD
 <head>
-    <!-- Mobile Specific Meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon-->
-    {% load static %}
-    <link rel="shortcut icon" href="{% static 'images/myfavicon.ico' %}">
-    <!-- Author Meta -->
-    <meta name="author" content="Zuri-Team-118">
-    <!-- Meta Description -->
-    <meta name="description" content="">
-    <!-- Meta Keyword -->
-    <meta name="keywords" content="">
-    <!-- meta character set -->
-    <meta charset="UTF-8">
-    <!-- Site Title -->
-    <title>{% block title %} {% endblock %}</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- CSS links ============================================= -->
-    {% load static %}
-<!--    <link rel="stylesheet" href="{% static 'css/main.css' %}">-->
-=======
-    <title>COREELS - Best Short Movies For College Students And From College Students</title>
->>>>>>> d15bd6583a78c2b5127f64063edb17c3d5a05643
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    {% endblock css %}
+    {% block extra_css %}{% endblock extra_css %}
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}" />
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}" />
+    <link rel="mask-icon" href="{% static 'favicon/safari-pinned-tab.svg' %}" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    {% block title %}
+    <title>Coreels! Best Short Movie Stream Platform For College Students</title>
+    {% endblock title %}
 </head>
 
 <body>
-
-<!-- Header navigation section -->
-<!-- To be styled with css-->
-<header>
-    <nav class="navigation">
-        <div class="nav-content">
-            <div class="logo-box"><a href="#hero">Coreels logo</a></div>
-            <ul class="menu-items">
-                <div class="icn btn-cancel">
-                    <i class="fa fa-times"></i>
+    {% block nav_bar %}
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-center">
+                <div class="nav-header">
+                    <div class="logo-container">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'images/logo.svg' %}" alt="logo image" class="logo" />
+                        </a>
+                    </div>
+                    <div class="logo-title">
+                        <a href="{% url 'home' %}">
+                            <h4 class="logo-text">Coreels</h4></a>
+                        </a>
+                    </div>
                 </div>
-                <li><a href="#menu1">#menu1</a></li>
-                <li><a href="#menu2">#menu2</a></li>
-                <li><a href="#menu3">#menu3</a></li>
-                <li><a href="#menu4">#menu4</a></li>
-            </ul>
-            <div class="icn btn-menu">
-                <i class="fa fa-bars"></i>
+                <div class="nav-button">
+                    <div class="hamburger--btn toggle">
+                        <img src="{% static 'images/hamburger.svg' %}" alt="menu buttton" class="hamburger">
+                    </div>
+                </div>
+                <div class="nav-links-container">
+                    <ul class="nav-links">
+                        <a href="{% url 'home' %}">
+                            <li class="links" id="scroll-link">Home</li>
+                        </a>
+                        <a href="{% url 'explore' %}">
+                            <li class="links" id="scroll-link">Explore</li>
+                        </a>
+                        <a href="{% url 'team' %}">
+                            <li class="links" id="scroll-link">Our&nbsp;&nbsp;Team</li>
+                        </a>
+                        <a href="{% url 'about' %}">
+                            <li class="links" id="scroll-link">About Us</li>
+                        </a>
+                        <a href="{% url 'contact' %}">
+                            <li class="links" id="scroll-link">Contact Us</li>
+                        </a>
+                        <a href="{% url 'faqs' %}">
+                            <li class="links" id="scroll-link">FAQs</li>
+                        </a>
+                    </ul>
+                </div>
+
+                {% if not request.user.is_authenticated %}
+                <div class="signing">
+                    <a href="{% url 'register' %}"> <button class="btn btn--1" id="btn--1">Sign up</button></a>
+                    <a href="{% url 'login' %}"><button class="btn btn--2" id="btn--2">Login</button></a>
+                </div>
+                {% else %}
+                <div class="signing">
+                    <a href="{% url 'login' %}">
+                        <button class="btn btn--2" id="btn--2">Upload</button>
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+    {% endblock nav_bar %}
+
+    {% block content %}
+    <h2>Coreels Page content here</h2>
+    {% endblock content %}
+
+    {% block footer %}
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="mobile-footer-center">
+            <h2 class="footer-title mobile-title">Coreels</h2>
+            <div class="icons mobile-icons">
+                <div class="icons-container">
+                    <a href="#" target="_blank">
+                        <img src="{% static 'images/linkedin.svg' %}" alt="linkedin logo" class="icon-image" />
+                    </a>
+                </div>
+                <div class="icons-container">
+                    <a href="#" target="_blank">
+                        <img src="{% static 'images/facebook.svg' %}" alt="facebook logo" class="icon-image" />
+                    </a>
+                </div>
+                <div class="icons-container">
+                    <a href="#" target="_blank">
+                        <img src="{% static 'images/gmail.svg' %}" alt="gmail logo" class="icon-image" />
+                    </a>
+                </div>
+                <div class="icons-container">
+                    <a href="#" target="_blank">
+                        <img src="{% static 'images/instagram.svg' %}" alt="instagram logo" class="icon-image" />
+                    </a>
+                </div>
+                <div class="icons-container">
+                    <a href="#" target="_blank">
+                        <img src="{% static 'images/twitter.svg' %}" alt="twitter logo" class="icon-image" />
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom terms">
+                <p>Terms of use</p>
+                <p>Privacy Policy</p>
+                <p>License</p>
+                <p>Imprint</p>
+            </div>
+            <div class="mobile-newsletter">
+                <h2 class="footer-title footer-mobile-title">Subscribe <span class="lower">to our </span>news letter
+                </h2>
+                <form action="" class="form-group mobile-form newsletter">
+                    <label for="email">Email address</label>
+                    <input type="email" name="email" class="email--ad mobile-news" id="email" required
+                        placeholder="email@example.com" />
+                </form>
+                <button class="btn email-btn mobile-news" id="email-btn">Subscribe</button>
+            </div>
+            <div class="mobile-bottom foot-bot">
+                <div>
+                    <span class="footer-bottom foot-bot">
+                        <h4>
+                            &copy;
+                            <span class="company">Coreels</span>
+                            <span id="date"></span>
+                    </span>
+                    </h4>
+                    </span>
+                </div>
+                <div class="footer-logo logo--2">
+                    <span class="world-cont">
+                        <img src="{% static 'images/world.svg' %}" alt="atlas logo" class="atlas">
+                    </span>
+                    <p>English</p>
+                </div>
             </div>
         </div>
-    </nav>
-</header>
-<!-- End of Header section -->
+        <div class="footer-center">
+            <div class="footer-header">
+                <div>
+                    <h2 class="footer-title">Coreels</h2>
+                    <div class="footer-info">
+                        Coreels is a new product which enables college students share, download and comment on short videos.
+                    </div>
+                    <div class="form">
+                        <form action="" class="form-group">
+                            <input type="text" name="search" class="search" id="search-button" required placeholder="search here" />
+                        </form>
+                    </div>
+                    <div class="icons">
+                        <div class="icons-container">
+                            <a href="#" target="_blank">
+                                <img src="{% static 'images/linkedin.svg' %}" alt="linkedin logo" class="icon-image" />
+                            </a>
+                        </div>
+                        <div class="icons-container">
+                            <a href="#" target="_blank">
+                                <img src="{% static 'images/facebook.svg' %}" alt="facebook logo" class="icon-image" />
+                            </a>
+                        </div>
+                        <div class="icons-container">
+                            <a href="#" target="_blank">
+                                <img src="{% static 'images/gmail.svg' %}" alt="gmail logo" class="icon-image" />
+                            </a>
+                        </div>
+                        <div class="icons-container">
+                            <a href="#" target="_blank">
+                                <img src="{% static 'images/instagram.svg' %}" alt="instagram logo" class="icon-image" />
+                            </a>
+                        </div>
+                        <div class="icons-container">
+                            <a href="#" target="_blank">
+                                <img src="{% static 'images/twitter.svg' %}" alt="twitter logo" class="icon-image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-<!--Main content section-->
-<div id="page-wrap">
-    {% block content %}
-    {% endblock %}
-</div>
-<!--End of main content section -->
+                <div>
+                    <h2 class="footer-title">Company</h2>
+                    <ul class="footer-links">
+                        <a href="{% url 'home' %}">
+                            <li class="links foot" id="scroll-link">Home</li>
+                        </a>
+                        <a href="{% url 'faqs' %}">
+                            <li class="links foot" id="scroll-link">FAQs</li>
+                        </a>
+                        <a href="{% url 'team' %}">
+                            <li class="links foot" id="scroll-link">Our&nbsp;&nbsp;team</li>
+                        </a>
+                        <a href="{% url 'about' %}">
+                            <li class="links foot" id="scroll-link">About</li>
+                        </a>
+                        <a href="{% url 'contact' %}">
+                            <li class="links foot" id="scroll-link">Contact us</li>
+                        </a>
+                        <a href="{% url 'login' %}">
+                            <li class="links foot" id="scroll-link">Sign in</li>
+                        </a>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="footer-title">Subscribe <span class="lower">to our </span>news letter</h2>
+                    <form action="" class="form-group newsletter">
+                        <label for="email">Email address</label>
+                        <input type="email" name="email" class="email--ad" id="email" required placeholder="email@example.com" />
+                    </form>
+                    <button class="btn email-btn" id="email-btn">Subscribe</button>
+                </div>
+            </div>
+            <div class="footer-header foot-bot">
+                <div>
+                    <span class="footer-bottom">
+                        <h4>
+                            &copy;
+                            <span class="company">Coreels</span>
+                            <span id="date"></span>
+                        </h4>
+                    </span>
+                </div>
+                <div class="footer-bottom">
+                    <p>Terms of use</p>
+                    <p>Privacy Policy</p>
+                    <p>License</p>
+                    <p>Imprint</p>
+                </div>
+                <div class="footer-logo">
+                    <span class="world-cont">
+                        <img src="{% static 'images/world.svg' %}" alt="atlas logo" class="atlas">
+                    </span>
+                    <p>English</p>
+                </div>
+            </div>
+    </footer>
+    <!-- End of Footer -->
+    <!-- Aside -->
+    {% endblock footer %}
 
-<!--Javascript links-->
-{% load static %}
-<!--<script src="{% static 'js/main.js' %}"></script>-->
+    {% block aside %}
+    <aside class="sidebar sidebar-close ">
+        <div class="close">
+            <img src="{% static 'images/close.svg' %}" alt="close button" class="close-button" />
+        </div>
+        <ul class="footer-links sidebar-links">
+            <a href="{% url 'home' %}">
+                <li class="links side-links" id="scroll-link">Home</li>
+            </a>
+            <a href="{% url 'faqs' %}">
+                <li class="links side-links" id="scroll-link">FAQs</li>
+            </a>
+            <a href="{% url 'team' %}">
+                <li class="links side-links" id="scroll-link">Our team</li>
+            </a>
+            <a href="{% url 'about' %}">
+                <li class="links side-links" id="scroll-link">About</li>
+            </a>
+            <a href="{% url 'contact' %}">
+                <li class="links side-links" id="scroll-link">Contact us</li>
+            </a>
+        </ul>
+        <a href="{% url 'register' %}"> <button class="btn btn--1 side-btn" id="btn--1">Sign up</button></a>
+        <a href="{% url 'login' %}"><button class="btn btn--2 side-btn" id="btn--2">Login</button></a>
+    </aside>
+    <!-- Aside -->
+    {% endblock aside %}
 
-
+    {% block js_script %}
+    <div class="overlay remove-overlay"></div>
+    <script src="{% static 'js/script.js' %}"></script>
+    {% endblock js_script %}
 </body>
 
 </html>

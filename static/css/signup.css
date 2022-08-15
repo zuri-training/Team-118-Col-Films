@@ -230,7 +230,7 @@ Beginning of Header
   display: flex;
   flex-direction: column;
   padding: 0px;
-  gap: 10px;
+  /* gap: 10px; */
   color: var(--color-style-8);
   height: 80%;
 }
@@ -247,12 +247,13 @@ Beginning of Header
   border: 2px solid #808080;
   height: 60px;
   padding-left: 8px;
-  cursor: pointer;
+  /* cursor: pointer; */
   background-color: transparent;
 }
 
 .form--login input[type="file"] {
   border: none;
+  height: 30px;
 }
 .id-file {
   color: transparent;
@@ -647,3 +648,14 @@ Aside
 End of Aside
 =================
 */
+
+
+/* Give the input fields gap */
+label {
+  margin-top: 15px;
+}
+
+label[for="file"] {
+  margin-top: 3px;
+}
+/* Give the input fields gap */

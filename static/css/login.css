@@ -138,9 +138,13 @@ login page
   align-items: center;
 }
 .small-check {
-  margin-right: 1.25rem;
+  margin-right: .5rem;
+}
+.input--checkbox .input--check label {
+  cursor: pointer;
 }
 .input--checkbox {
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -177,9 +181,14 @@ login page
     align-items: center;
   }
   .small-check {
-    margin-right: 1.25rem;
+    margin-right: .5rem;
   }
+  .input--checkbox .input--check label {
+    cursor: pointer;
+  }
+
   .input--checkbox {
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
   }

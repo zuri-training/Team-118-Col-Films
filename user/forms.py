@@ -1,11 +1,25 @@
 # -*- coding: utf-8 -*-
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-from django.core.exceptions import ValidationError
+# from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 
 from user.models import UserModel
 
 
+class CreateUserForm(UserCreationForm):
+    """Change form sed in creating users to support email as username"""
+
+    class Meta:
+        model = UserModel
+        fields = ('fullname', 'email', 'college_id')
+
+class ChangeUserForm(UserChangeForm):
+    """Ensure that the correct model is used for changing user details"""
+    class Meta:
+        model = UserModel
+        fields = ('email',)
+
+'''
 class CreateUserForm(UserCreationForm):
     """Enable Case Insensitive Validation of username
     
@@ -45,3 +59,4 @@ class ChangeUserForm(UserChangeForm):
     class Meta:
         model = UserModel
         fields = ["username", "email"]
+'''

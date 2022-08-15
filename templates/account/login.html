@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+{% endblock extra_css %}
+
+{% block title %}
+<title>Sign In To Coreels</title>
+{% endblock title %}
+
+{% block content %}
+<!-- Login Form START -->
+<div id="login-form">
+  <img
+    src="{% static 'images/tablet-login/pana.svg' %}"
+    class="login--image"
+    alt=""
+  />
+  <form action="{% url 'account_login' %}" method="post" id="form--login">
+    <h1 class="login-title">Welcome Back!</h1>
+    {% comment %} <ul class="errorlist">
+        {% for field in form %}
+            {% for error in field.errors %}
+            <li>
+                <strong>{{ error|escape }}</strong>
+            </li>
+            {% endfor %}
+        {% endfor %}
+    </ul> {% endcomment %}
+    {% if form.non_field_errors %}
+    <div class="non-field-errors">
+        <ul class="errorlist">
+            {% for error in form.non_field_errors %}
+            <li>
+                <strong>{{ error|escape }}</strong>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    {% csrf_token %}
+    <label for="id_login">Student Email Address</label>
+    <input
+      type="email"
+      name="login"
+      placeholder="Enter email address here"
+      class="email"
+      id="id_login"
+      required
+    />
+    <div class="input-error">
+        {{ form.login.errors }}
+    </div>
+
+    <label for="id_password">Enter Password</label>
+    <input
+      type="password"
+      name="password"
+      placeholder="Type password here"
+      class="password"
+      id="id_password"
+      required
+    />
+    <div class="input-error">
+        {{ form.password.errors }}
+    </div>
+    <div class="input--checkbox">
+      <span class="input--check">
+        <span class="small-check">
+            <input type="checkbox" id="remember" value="" class="remember-me" />
+        </span>
+        <label for="remember">
+          <p>Remember me</p>
+        </label>
+      </span>
+      <a
+        href="{% url 'password_reset' %}"
+        style="float: right; margin-bottom: 5px"
+        >Forgot password?</a
+      >
+    </div>
+    <div>
+      <button type="submit" value="Sign in" class="sub-btn log--in">
+        Log in
+      </button>
+      <p>
+        Don't have an account yet?
+        <a href="{% url 'register' %}" class="blue-txt">Sign up here</a>
+      </p>
+    </div>
+  </form>
+</div>
+<!-- Login Form STAENDRT -->
+{% endblock content %}

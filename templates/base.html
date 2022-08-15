@@ -76,12 +76,12 @@
 
                 {% if not request.user.is_authenticated %}
                 <div class="signing">
-                    <a href="{% url 'register' %}"> <button class="btn btn--1" id="btn--1">Sign up</button></a>
-                    <a href="{% url 'login' %}"><button class="btn btn--2" id="btn--2">Login</button></a>
+                    <a href="{% url 'account_signup' %}"> <button class="btn btn--1" id="btn--1">Sign up</button></a>
+                    <a href="{% url 'account_login' %}"><button class="btn btn--2" id="btn--2">Login</button></a>
                 </div>
                 {% else %}
                 <div class="signing">
-                    <a href="{% url 'login' %}">
+                    <a href="{% url 'create-video' %}">
                         <button class="btn btn--2" id="btn--2">Upload</button>
                     </a>
                 </div>
@@ -221,7 +221,7 @@
                         <a href="{% url 'contact' %}">
                             <li class="links foot" id="scroll-link">Contact us</li>
                         </a>
-                        <a href="{% url 'login' %}">
+                        <a href="{% url 'account_login' %}">
                             <li class="links foot" id="scroll-link">Sign in</li>
                         </a>
                     </ul>
@@ -285,8 +285,8 @@
                 <li class="links side-links" id="scroll-link">Contact us</li>
             </a>
         </ul>
-        <a href="{% url 'register' %}"> <button class="btn btn--1 side-btn" id="btn--1">Sign up</button></a>
-        <a href="{% url 'login' %}"><button class="btn btn--2 side-btn" id="btn--2">Login</button></a>
+        <a href="{% url 'account_signup' %}"> <button class="btn btn--1 side-btn" id="btn--1">Sign up</button></a>
+        <a href="{% url 'account_login' %}"><button class="btn btn--2 side-btn" id="btn--2">Login</button></a>
     </aside>
     <!-- Aside -->
     {% endblock aside %}

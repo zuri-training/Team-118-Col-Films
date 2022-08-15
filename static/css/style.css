@@ -41,6 +41,28 @@ input#search-button {
   padding-left: 40px;
 }
 
+.non-field-errors ul.errorlist {
+  padding: 10px 15px;
+  background-color: red;
+  color: white;
+  max-width: 500px;
+}
+
+.input-error ul.errorlist {
+  margin-bottom: 10px;
+  padding: 0;
+  color: red;
+}
+
+.email, .password, .sub-btn, input {
+  margin: 2px 2px !important;
+}
+
+button {
+  cursor: pointer;
+}
+/* Style input buttons END */
+
 
 
 ul {

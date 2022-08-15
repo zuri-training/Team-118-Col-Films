@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}" />
+{% endblock extra_css %}
+
+{% block title %}
+<title>Signup New Account</title>
+{% endblock title %}
+
+{% block content %}
+<!-- Register Form START -->
+<main class="signup-page">
+  <div class="img-form-div">
+    <div class="mob-login-img">
+      <img src="{% static 'images/Mobile login-bro 1.svg' %}" alt="">
+    </div>
+      <div>
+        <form action="{% url 'account_signup' %}" method="post" class="form--login" enctype="multipart/form-data">
+          <h1>Sign up here</h1>
+          {% if form.non_field_errors %}
+          <div class="non-field-errors">
+            <ul class="errorlist">
+                {% for error in form.non_field_errors %}
+                <li>
+                    <strong>{{ error|escape }}</strong>
+                </li>
+                {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+          {% csrf_token %}
+
+          <label for="id_fullname">Full name</label>
+          <input type="text" placeholder="Type full name here" class="input--border" name="fullname" id="id_fullname" maxlength="150">
+          <div class="input-error">
+            {{ form.fullname.errors }}
+          </div>
+
+          <label for="id_email">Student email address</label>
+          <input type="email" placeholder="Enter email address here" required class="input--border" name="email" id="id_email"  maxlength="254">
+          <div class="input-error">
+            {{ form.email.errors }}
+          </div>
+
+          <label for="id_password1">Enter password</label>
+          <input type="password" placeholder="Type password here" class="input--border" required required name="password1" autocomplete="new-password" aria-autocomplete="list" id="id_password1">
+          <div class="input-error">
+            {{ form.password1.errors }}
+          </div>
+
+          <label for="id_password2">Confirm password</label>
+          <input type="password" placeholder="Type password here again" class="input--border" name="password2" autocomplete="new-password" id="id_password2">
+          <div class="input-error">
+            {{ form.password2.errors }}
+          </div>
+
+          <label for="id_college_id" class="col-id">College ID </label>
+          <label for="file" class="label-file">
+            <input type="file" class="id-file" class="input--border" id="id_college_id" name="college_id" accept="image/*" >
+            Upload
+          </label>
+          <div class="input-error">
+            {{ form.college_id.errors }}
+          </div>
+        
+          <label for="id_tos" class="checkbox">
+            <input type="checkbox" class="input--border" style="height:20px; width: 30px;" required name="tos" id="id_tos">
+            I agree to the <span class="signup-terms"> Terms & Conditions </span>  and <span class="signup-terms"> Privacy Policy.</span>
+          </label>
+          <div class="input-error">
+            {{ form.tos.errors }}
+          </div>
+      
+          <button class="signup--button">Sign up</button>
+      </form>
+      </div>
+  </div>
+</main>
+<!-- Register Form END -->
+{% endblock content %}

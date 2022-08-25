@@ -75,6 +75,20 @@
                 </h2>
             </div>
             <div class="trending-center">
+                <!-- Auto video start -->
+                {% for reel in reels %}
+                <article class="trendy-videos">
+                    <div class="trendy-video-container">
+                        <a href="{% url 'video-detail' reel.pk %}">
+                            <img src="{{ reel.cover_thumbnail.url }}" alt="" class="trendy" />
+                        </a>
+                    </div>
+                    <h4 class="explore-card-title">{{ reel.title }}</h4>
+                    <p class="explore-card-info">By: {{ reel.uploader.full_name }}</p>
+                </article>
+                {% endfor %}
+
+
                 <article class="trendy-videos">
                     <div class="trendy-video-container">
                         <img src="{% static 'images/reading.png' %}" alt="" class="trendy">

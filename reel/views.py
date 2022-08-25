@@ -12,6 +12,7 @@ from .models import Reel
 
 class IndexView(ListView):
     model = Reel
+    context_object_name = "reels"
     template_name = "reel/home.html"
     order_by = "-date_posted"
 

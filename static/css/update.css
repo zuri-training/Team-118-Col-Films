@@ -1,0 +1,53 @@
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5px 3%;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row .reel-update {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.row .reel-preview {
+    width: 100%;
+    margin-top: 0;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 40px;
+}
+
+
+/* Medium screen breakpoint */
+@media (min-width: 768px) {
+    .row .reel-update {
+        width: 40%;
+    }
+
+    .row .reel-preview {
+        width: 54%;
+        margin-right: 2%;
+        margin-left: 0;
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+}
+
+
+
+/* Style reel cover field */
+input#id_cover_thumbnail {
+    height: 40px;
+    border: 1px solid #808080;
+    padding-bottom: 30px;
+}
+
+
+/* Style the publish button */
+input#id_published {
+    display: inline-block;
+    height: auto;
+}

@@ -158,6 +158,20 @@
     <section class="explore-landing-page">
       <div class="explore-landing-center">
         <div class="explore-section-center">
+
+          <!-- Auto video start -->
+          {% for reel in reels %}
+          <article class="explore-card-design">
+            <div class="explore-video-container">
+              <a href="{% url 'video-detail' reel.pk %}">
+                <img src="{{ reel.cover_thumbnail.url }}" alt="" class="trendy" />
+              </a>
+            </div>
+            <h4 class="explore-card-title">{{ reel.title }}</h4>
+            <p class="explore-card-info">By: {{ reel.uploader.full_name }}</p>
+          </article>
+          {% endfor %}
+
           <article class="explore-card-design">
             <div class="explore-video-container">
               <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />

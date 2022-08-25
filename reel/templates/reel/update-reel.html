@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static reel_tags %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}" />
+<link rel="stylesheet" href="{% static 'css/update.css' %}" />
+{% endblock extra_css %}
+
+{% block title %}
+<title>Update Reel</title>
+{% endblock title %}
+
+{% block content %}
+<!-- Upadte Form START -->
+<main class="signup-page">
+  <div class="row">
+    <div class="reel-update">
+      <form action="{% url 'account_signup' %}" method="post" class="form--login" enctype="multipart/form-data" name="uploadForm">
+          <h1>Update reel</h1>
+          {% if form.non_field_errors %}
+          <div class="non-field-errors">
+            <ul class="errorlist">
+                {% for error in form.non_field_errors %}
+                <li>
+                    <strong>{{ error|escape }}</strong>
+                </li>
+                {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+          {% csrf_token %}
+
+          <label for="id_title">Video title</label>
+          <input type="text" placeholder="Video short title" name="title" maxlength="255" required id="id_title" class="input--border" spellcheck="false" data-ms-editor="true" value="{{ form.title.value|stringformat:'s' }}">
+          <div class="input-error">
+            {{ form.title.errors }}
+          </div>
+
+          <label for="id_description">Detailed description</label>
+          <textarea name="description" id="id_description" class="input--border" required spellcheck="false" data-ms-editor="true" placeholder="Enter detailed video description" rows="25">{{ form.description.value|stringformat:'s' }}</textarea>
+          <div class="input-error">
+            {{ form.description.errors }}
+          </div>
+
+          <label for="id_category">Video category</label>
+          <select name="category" required="" id="id_category" class="input--border" multiple="">
+            {% get_category_options %}
+          </select>
+          <div class="input-error">
+            {{ form.category.errors }}
+          </div>
+
+          <label for="id_cover_thumbnail">Video cover</label>
+          <input type="file" name="cover_thumbnail" id="id_cover_thumbnail" class="input--border" accept="image/*">
+          <div class="input-error">
+            {{ form.cover_thumbnail.errors }}
+          </div>
+
+          <label for="id_published">
+            <input type="checkbox" name="published" id="id_published" class="input--border">
+            Published status
+          </label>
+          <div class="input-error">
+            {{ form.published.errors }}
+          </div>
+      
+          <button class="signup--button">Publish Reel</button>
+      </form>
+    </div>
+    <div class="reel-preview">
+      <h2>Video preview</h2>
+      <video width="100%" height="auto" controls>
+        <source src="{{ reel.video.url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</main>
+<!-- Register Form END -->
+{% endblock content %}

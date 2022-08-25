@@ -40,7 +40,7 @@ class Reel(models.Model):
         help_text=_("Enter a title for your short video")
     )
     description = models.TextField(
-        _("long description"), 
+        _("long description"),
         help_text=_("Enter a description for your short video")
     )
     category = models.ManyToManyField(
@@ -60,6 +60,10 @@ class Reel(models.Model):
             'MOV', 'avi', 'mp4', 'webm', 'mkv'
         ])]
     )
+    published = models.BooleanField(
+        _("published status"), default=False,
+        help_text=_("Designates whether video has been published."),
+    )
     date_posted = models.DateTimeField(
         _("date uploaded"), default=timezone.now,
         help_text="date video was uploaded"
@@ -70,6 +74,9 @@ class Reel(models.Model):
 
     def __str__(self) -> str:
         return self.title
+
+    def get_categories(self):
+        """Returns categories of a given reel."""
 
 
 class Comment(models.Model):

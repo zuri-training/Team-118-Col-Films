@@ -1,22 +1,13 @@
-from venv import create
-from wsgiref.handlers import format_date_time
-from django.shortcuts import render, reverse
-from django.http import HttpResponse
-from django.views.generic import TemplateView
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.views.generic.detail import DetailView
-from django.views.generic.list import ListView
-from .models import Reel
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.core.exceptions import ValidationError
+from django.shortcuts import render, reverse
+from django.views.generic import TemplateView
+from django.views.generic import (
+    CreateView, DeleteView, DetailView, ListView, UpdateView
+)
+from django.utils.translation import gettext_lazy as _
 
-
-def home(request):
-    """Returns the homepage of our reels website
-
-    Args:
-        request (HttpRequest): an instance of HttpRequest object.
-    """
-    return HttpResponse("<h1>COREELS HOMEPAGE</h1>")
+from .models import Reel
 
 
 class IndexView(ListView):
@@ -25,32 +16,47 @@ class IndexView(ListView):
     order_by = "-date_posted"
 
 
-class AboutView(TemplateView):
-    template_name = "about.html"
-
 # Restricting the create video page to only logged in users
 class CreateVideo(LoginRequiredMixin, CreateView):
     model = Reel
-    fields = ['title', 'description', 'video', 'cover_thumbnail']
-    template_name = "create_video.html"
+    fields = [
+        'video'
+    ]
+    template_name = "reel/upload.html"
 
     def form_valid(self, form):
-        form.instance.uploader = self.request.user
-        return super().form_valid(form)
+        if self.request.user.is_verified: # Is user a verified college student?
+            form.instance.uploader = self.request.user
+            return super().form_valid(form)
+        
+        # If user is not verified.
+        form.add_error(None, ValidationError(
+            _("Only verified college students can upload videos"),
+            code='user_error'
+        ))
+        return render(self.request, self.template_name, {'form': form})
 
     def get_success_url(self):
-        return reverse('video-detail', kwargs={'pk': self.object.pk})
+        return reverse('update-video', kwargs={'pk': self.object.pk})
 
 
 class VideoDetail(DetailView):
     model = Reel
-    template_name = "video_detail.html"
+    context_object_name = 'reel'
+    template_name = "reel/player.html"
 
 # Restricting the update video page to only logged in users
 class UpdateVideo(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Reel
-    fields = ['title', 'description']
-    template_name = "create_video.html"
+    fields = [
+        'title', 'description', 'category', 'cover_thumbnail', 'published'
+    ]
+    template_name = "reel/update-reel.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['reel'] = self.get_object()
+        return context
 
     def get_success_url(self):
         return reverse('video-detail', kwargs={'pk': self.object.pk})
@@ -71,9 +77,11 @@ class DeleteVideo(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         video = self.get_object()
         return self.request.user == video.uploader
 
+
 def explore(request):
     """Returns explore page"""
-    return render(request, 'reel/explore.html', {})
+    reels = Reel.objects.all()
+    return render(request, 'reel/explore.html', {'reels': reels})
 
 
 def team(request):

@@ -1189,3 +1189,9 @@ footer input {
 Footer input styling
 ======================
 */
+
+
+/* Extra color styles */
+.text-red {
+  color: red;
+}

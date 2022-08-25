@@ -137,6 +137,7 @@ old-requirements.txt
 coreels.code-workspace
 test-data/
 reformat.html
+mediafiles/
 
 # VSCode Files
 .vscode/

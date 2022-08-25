@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/player.css' %}" />
+{% endblock extra_css %}
+
+{% block title %}
+<title>Play Video</title>
+{% endblock title %}
+
+{% block content %}
+<!-- Player START -->
+<main class="main-video">
+    <div class="video-container">
+        <video src="{{ reel.video.url }}" controls>
+            Your browser doesn't support playing videos
+        </video>
+        {% comment %} <img src="{% static 'images/movie-player-mobile.svg' %}" alt="" class="video-screen-mobile" />
+        <img src="{% static 'images/movie-player-desktop.svg' %}" alt="" class="video-screen-desktop" /> {% endcomment %}
+    </div>
+    <div class="video-center">
+        <div class="video-player-info">
+            <span class="video-title">
+                <h3>{{ reel.title }}</h3>
+            </span>
+            <span class="video-star"><i class="fa-solid fa-star"></i></span>
+            <span class="rating">7.5 / 10</span>
+            <span class="video-views"><i class="fa-regular fa-eye"></i></span>
+            <span class="video-views-number">.600</span>
+        </div>
+        <div class="video-time">
+            <div>
+                <span class="rating">10 mins</span>
+                <span class="rating">
+                    {% for cat in reel.category.all %}
+                        {{ cat.name }},
+                    {% endfor %}
+                </span>
+            </div>
+            <div><span class="rating">{{ reel.iploader.full_name }}</span></div>
+        </div>
+        <div class="video-content">
+            <p>
+                {{ reel.description }}
+            </p>
+        </div>
+        <div class="video-icons-bar">
+            <div class="icons-bar">
+                <span class="icon-button" id="like"><i class="fa-regular fa-thumbs-up"></i></span>
+                <p id="like-number">300</p>
+            </div>
+            <div class="icons-bar">
+                <span class="icon-button" id="dislike"><i class="fa-regular fa-thumbs-down"></i></span>
+                <p id="like-number">Dislike</p>
+            </div>
+            <div class="icons-bar">
+                <span class="icon-button" id="share"><i class="fa-solid fa-share-nodes"></i></span>
+                <p id="like-number">Share</p>
+            </div>
+            <div class="icons-bar">
+                <span class="icon-button" id="bookmark"><i class="fa-regular fa-bookmark"></i></span>
+                <p id="like-number">Save</p>
+            </div>
+        </div>
+        <div class="video-author">
+            <div class="author-title">
+                <h3>About the author</h3>
+            </div>
+            <p class="author-info">
+                Ogechi Obi is a student of the University of Nsukka, studying Mass
+                Communication. As an empathetical individual who believes that everyone
+                has a right to be heard. Through her camera lens, stories are been
+                captured and shared. She is currently serving as the president of Penn's
+                State Studient Association. Her other invlolvements includes Society of
+                Women in Film (SWF) and Mass Communication Students Association (MASCA)
+            </p>
+        </div>
+        <div class="comment-section">
+            <div class="comment-title">
+                <h3>Comments</h3>
+                <span class="com-number" id="comment-number">15</span>
+            </div>
+            <div class="comment-comment">
+                <div>
+                    <div class="user-image-cont">
+                        <img src="{% static 'images/usercom-img.svg' %}" alt="" class="user-com-image" />
+                    </div>
+                </div>
+                <div class="usercom-info">
+                    <div class="username-com">
+                        <h5>John Clark</h5>
+                        <p class="username-comment">
+                            Great work Ogechi, the world needs to hear the truth about poverty
+                            and starvation happening in continents like Asia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="emoji">
+                <span class="emoji-smile"><i class="fa-regular fa-face-smile"></i></span>
+                <span class="time-spent">6 hours ago</span>
+            </div>
+            <div class="comment-border"></div>
+            <p class="comment-view">View more...</p>
+        </div>
+    </div>
+    <div class="related-videos">
+        <div class="related-title section-title">
+            <h2>related to watch</h2>
+        </div>
+        <div class="related-video-center">
+            <article class="home-videos">
+                <div class="related-video-container">
+                    <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+                </div>
+                <h4 class="home--video-title">Reading habits</h4>
+                <p class="home-video-info">By: Jemimah Ameobi</p>
+            </article>
+            <article class="home-videos">
+                <div class="related-video-container">
+                    <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+                </div>
+                <h4 class="home--video-title">Reading habits</h4>
+                <p class="home-video-info">By: Jemimah Ameobi</p>
+            </article>
+            <article class="home-videos">
+                <div class="related-video-container">
+                    <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+                </div>
+                <h4 class="home--video-title">Reading habits</h4>
+                <p class="home-video-info">By: Jemimah Ameobi</p>
+            </article>
+            <article class="home-videos">
+                <div class="related-video-container">
+                    <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+                </div>
+                <h4 class="home--video-title">Reading habits</h4>
+                <p class="home-video-info">By: Jemimah Ameobi</p>
+            </article>
+            <article class="home-videos">
+                <div class="related-video-container">
+                    <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+                </div>
+                <h4 class="home--video-title">Reading habits</h4>
+                <p class="home-video-info">By: Jemimah Ameobi</p>
+            </article>
+            <article class="home-videos">
+                <div class="related-video-container">
+                    <img src="{% static 'images/reading.png' %}" alt="" class="trendy" />
+                </div>
+                <h4 class="home--video-title">Reading habits</h4>
+                <p class="home-video-info">By: Jemimah Ameobi</p>
+            </article>
+        </div>
+        <a href="#"><button class="home-video-button home-buttons">See more</button></a>
+    </div>
+</main>
+<!-- Player END -->
+{% endblock content %}

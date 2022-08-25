@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/upload.css' %}" />
+{% endblock extra_css %}
+
+{% block title %}
+<title>Explore Coreels Movie Collections</title>
+{% endblock title %}
+
+{% block content %}
+<!-- Main -->
+<main class="upload-main">
+    <div class="upload-center">
+      <div>
+        <h2 class="upload-title">upload videos</h2>
+      </div>
+      <div class="upload-privacy">
+        <div class="upload-image-cont">
+          <img src="{% static 'images/lock-open.svg' %}" class="imgOne" alt="" />
+        </div>
+        <h5>Privacy</h5>
+      </div>
+    </div>
+    <form action="{% url 'upload' %}" enctype="multipart/form-data" method="post" id="upload-form" name="uploadForm">
+        {% csrf_token %}
+        <div class="upload-section">
+            {% if form.non_field_errors %}
+            <div class="non-field-errors">
+                <ul class="errorlist">
+                    {% for error in form.non_field_errors %}
+                    <li>
+                        <strong>{{ error|escape }}</strong>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <br><br>
+            </div>
+            {% endif %}
+            <div class="upload-big-image">
+                <img src="{% static 'images/upload-icon.svg' %}" alt="" class="big-upload" />
+            </div>
+            <div class="upload-info-cont">
+                <p class="upload-info">Drag and drop video file to upload</p>
+            </div>
+        </div>
+        <i class="upload-button">
+            <label id="browseFileBtn" for="fileSelectorInput">
+                <input type="file" name="video" required id="fileSelectorInput" accept="video/*"> or Select video file
+            </label>
+          </i>
+        <div class="video-details">
+            <p></p>
+        </div>
+        <div class="upload-terms">
+          <p>
+            By submitting your videos you are saying yes to our
+            <a href="#"> <span class="term">Terms and Conditions</span></a
+            >. Please do not violate the copyrights and privacy right of others.
+            <span class="term">Learn more</span>
+          </p>
+        </div>
+        <button type="submit" class="upload-button" id="uploadButton">
+            Upload Video
+        </button>
+    </form>
+</main>
+<script src="{% static 'js/upload.js' %}"></script>
+{% endblock content %}

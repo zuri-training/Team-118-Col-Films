@@ -442,6 +442,15 @@ Main layout
   padding: 2rem;
 }
 .main-grid-center {
+  display: grid;
+}
+.proflie--links {
+  display: none;
+}
+.proflie--content {
+  display: grid;
+}
+.profile--list {
   display: none;
 }
 @media screen and (min-width: 920px) {
@@ -472,6 +481,7 @@ Main layout
     gap: 2rem;
   }
   .proflie--links {
+    display: grid;
     height: 20rem;
   }
   .proflie--links:hover {
@@ -479,7 +489,10 @@ Main layout
   }
   .proflie--content {
     height: 20rem;
-    background-color: blue;
+    display: block;
+  }
+  .profile--list {
+    display: grid;
   }
 }
 .prof-user-links {
@@ -494,6 +507,18 @@ Main layout
   background: linear-gradient(270deg, #8ecae6 0%, rgba(142, 202, 230, 0) 100%);
   border-right: 4px solid #5f8799;
 }
+
+/* 
+=================
+Profile--content
+=================
+*/
+
+/* 
+=================
+End of Profile--content
+=================
+*/
 /* 
 =================
 End of Main Layout

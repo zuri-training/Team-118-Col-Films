@@ -64,12 +64,27 @@ const save = document.getElementById("bookmark");
 
 like.addEventListener("click", function (e) {
   const likeButton = e.currentTarget;
+  const disl = e.currentTarget.nextElementSibling;
+  if (disl) {
+    console.log(disl.children);
+  }
   if (!likeButton.classList.contains("btn-like")) {
     likeButton.classList.add("btn-like");
     like.innerHTML = '<i class="fa-solid fa-thumbs-up"></i>';
     dislike.innerHTML = '<i class="fa-regular fa-thumbs-down"></i>';
-  } else if (dislike) {
+  } else if (likeButton.classList.contains("btn-like")) {
+    like.innerHTML = '<i class="fa-regular fa-thumbs-up"></i>';
+    likeButton.classList.remove("btn-like");
+
+    // dislike.innerHTML = '<i class="fa-solid fa-thumbs-down"></i>';
+  }
+
+  if (!disl.classList.contains("btn-dislike")) {
+    dislike.classList.add("btn-dislike");
     like.innerHTML = '<i class="fa-regular fa-thumbs-up"></i>';
     dislike.innerHTML = '<i class="fa-solid fa-thumbs-down"></i>';
+  } else if (dislike.classList.contains("btn-dislike")) {
+    dislike.innerHTML = '<i class="fa-regular fa-thumbs-down"></i>';
+    dislike.classList.remove("btn-like");
   }
 });

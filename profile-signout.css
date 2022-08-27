@@ -70,6 +70,7 @@ body {
 End of Global Styles
 =================
 */
+
 /* 
 =================
 Header
@@ -198,10 +199,11 @@ End of Header
 =================
 */
 /* 
-=================
-Explore
-=================
+===================
+input header
+===================
 */
+
 .mobile-explore-user {
   display: flex;
   justify-content: space-between;
@@ -216,8 +218,8 @@ Explore
   padding: 1rem;
   margin-left: -8rem;
   width: 10rem;
-  background: #ffffff;
   margin-top: 2rem;
+  background: #ffffff;
 }
 .user-sidebar-toggle {
   display: none;
@@ -394,7 +396,7 @@ Explore
     margin-bottom: 1.5rem;
   }
   .form-explore {
-    min-width: 90vw;
+    min-width: 70vw;
     display: flex;
     justify-content: space-between;
     margin-right: auto;
@@ -417,125 +419,291 @@ Explore
     cursor: pointer;
   }
 }
-
-.explore-tag-center {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+/* 
+===================
+End of input header
+===================
+*/
+/* 
+===================
+Main layout
+===================
+*/
+.profile-main {
+  background: var(--color-style-1);
 }
-.small-explore-tag {
+.second-grid {
   display: none;
 }
-.explore-landing-center {
-  padding: 2rem 1rem;
+/* .main-grid {
+  padding: 2rem;
+} */
+.main-grid-sec {
+  padding: 2rem;
+}
+.main-grid-center {
+  display: grid;
+}
+.proflie--links {
+  display: none;
+}
+.proflie--content {
+  display: grid;
+}
+.profile--list {
+  display: none;
 }
 @media screen and (min-width: 920px) {
-  .small-explore-tag {
-    display: inline-flex;
+  .profile-center {
+    display: grid;
+    grid-template-columns: 70vw 30vw;
+    gap: 2rem;
+  }
+  .main-grid {
+    background: var(--color-style-1);
+    min-height: 100vh;
+    padding: 0px 0px 0px 2rem;
+  }
+  .second-grid {
+    background: rgba(128, 128, 128, 0.08);
+    padding: 3rem 1rem;
+    min-height: 100vh;
+    padding-right: 2rem;
+    display: grid;
+  }
+  .main-grid-sec {
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  .main-grid-center {
+    display: grid;
+    grid-template-columns: 20vw 50vw;
+    gap: 2rem;
+  }
+  .proflie--links {
+    display: grid;
+    height: 20rem;
+  }
+
+  .proflie--content {
+    height: 20rem;
+    width: 50vw;
+    display: block;
+  }
+  .profile--list {
+    display: grid;
   }
 }
-.explore-section-center {
-  margin-right: auto;
-  margin-left: auto;
+.prof-user-links {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 2rem;
 }
-.explore-card-design {
-  background: var(--color-style-4);
-  border-radius: 0.375rem;
-  max-width: 50%;
-  max-height: 50%;
-  margin-bottom: 1.5rem;
-  margin-right: auto;
-  margin-left: auto;
+.last-child {
+  margin-top: 7rem;
 }
-.explore-video-container {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
+.prof-user-links:hover {
+  background: linear-gradient(270deg, #8ecae6 0%, rgba(142, 202, 230, 0) 100%);
+  border-right: 4px solid #5f8799;
 }
-.explorer {
+
+/* 
+=================
+Profile--content
+=================
+*/
+.sign-header {
+  padding: 4rem 0;
+}
+.sign--info {
+  font-family: var(--font-family-1);
+  font-size: 1.25rem;
+  max-width: 15rem;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+.sign-button {
+  background: transparent;
+  color: var(--color-style-3);
+  border: 2px solid var(--color-style-3);
+}
+.sign-button:hover {
+  background: var(--color-style-10);
+  color: #fff;
+}
+.sign-buttons {
+  display: flex;
+  gap: 2rem;
+  max-width: 20rem;
+  margin: 0 auto;
+  justify-content: center;
+}
+@media screen and (min-width: 920px) {
+  .profile--content {
+    width: 40vw;
+  }
+  .sign--info {
+    font-size: 2.25rem;
+    max-width: 20rem;
+  }
+  .sign-buttons {
+    max-width: 20rem;
+  }
+}
+/* 
+=================
+End of Profile--content
+=================
+*/
+/* 
+=================
+End of Main Layout
+=================
+*/
+/* 
+=================
+Main Grid
+=================
+*/
+.playlist--player {
+  height: 6.5rem;
+  width: 100%;
+  background: linear-gradient(90deg, #2c3e50 0%, #3498db 100%);
+  border-radius: 6px;
+}
+
+@media screen and (min-width: 920px) {
+  .playlist--player {
+    height: 7rem;
+    width: 100%;
+    background: linear-gradient(90deg, #2c3e50 0%, #3498db 100%);
+    border-radius: 6px;
+    margin: 0;
+  }
+}
+.big-user-cont {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 2px solid #f2f2f2;
+  margin-left: 1rem;
+  position: relative;
+}
+.big-user-cont::after {
+  content: "\270E";
+  font-size: 1rem;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  top: 2.5rem;
+  right: -0.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--color-style-1);
+  color: var(--color-style-5);
+}
+.big-user-image {
   width: 100%;
   height: 100%;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  object-fit: cover;
 }
-.explore-card-title,
-.explore-card-info {
-  font-family: var(--font-family-2);
-  line-height: 22px;
-  padding: 0px 4px;
-}
-.explore-card-title {
-  font-size: 0.75rem;
-}
-.explore-card-info {
-  font-size: 0.56rem;
-}
-
-@media screen and (min-width: 375px) {
-  .explore-section-center {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1rem;
-  }
-  .explore-card-design {
-    flex: 0 0 calc(33.33% - 1rem);
-  }
-}
-@media screen and (min-width: 768px) {
-  .explore-section-center {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .explore-card-design {
-    flex: 0 0 calc(25% - 1rem);
-  }
-}
-
-@media screen and (min-width: 920px) {
-  .explore-card-design {
-    flex: 0 0 calc(20% - 1rem);
-    /* gap: 1rem; */
-  }
-
-  .explore-section-center {
-    max-width: 1170px;
-    justify-content: center;
-  }
-  .home-buttons {
-    width: 13rem;
-  }
-}
-/* 
-=================
-End of Explore landing page
-=================
-*/
-/* 
-=================
-Explore Release Section
-=================
-*/
-.explore-title-button,
-.explore-sec {
+.playlist--player {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.user--info {
+  color: var(--color-style-1);
+}
+.user--info h3 {
+  font-family: var(--font-family-1);
+  font-size: 1.5rem;
+}
+/* 
+=================
+End of Main Grid
+=================
+*/
+
+/* 
+=================
+Playlist (second-grid)
+=================
+*/
+.playlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2rem;
+  margin-bottom: 1rem;
+}
+.playlist-button {
+  padding: 1rem 1rem;
+  width: auto;
+}
+.playlist-title {
+  font-family: var(--font-family-1);
+  color: #011119;
+}
+.playlist-section {
+  margin-bottom: 6rem;
+}
+.playlist-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 2rem;
+  margin-bottom: 1.5rem;
+}
+.playlist--side {
+  display: flex;
+  gap: 1rem;
   align-items: center;
 }
+.play-cont {
+  width: 4rem;
+  height: 4rem;
+}
+.small-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.play--info {
+  color: #011119;
+  font-family: var(--font-family-2);
+}
+.play--info p {
+  text-transform: capitalize;
+}
+.dot-button {
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+}
+
+.dot--image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.playlist--image--big {
+  width: 100%;
+  height: 17rem;
+  margin-bottom: 4rem;
+}
+.big--pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /* 
 =================
-End of Explore
+End of Playlist
 =================
 */
-
 /* 
 =================
 Footer

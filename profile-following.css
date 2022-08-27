@@ -652,6 +652,16 @@ Playlist (second-grid)
   height: 100%;
   object-fit: cover;
 }
+.playlist--image--big {
+  width: 100%;
+  height: 17rem;
+  margin-bottom: 4rem;
+}
+.big--pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /* 
 =================
 End of Playlist

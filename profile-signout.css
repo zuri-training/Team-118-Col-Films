@@ -484,11 +484,10 @@ Main layout
     display: grid;
     height: 20rem;
   }
-  .proflie--links:hover {
-    background: red;
-  }
+
   .proflie--content {
     height: 20rem;
+    width: 50vw;
     display: block;
   }
   .profile--list {
@@ -513,7 +512,45 @@ Main layout
 Profile--content
 =================
 */
-
+.sign-header {
+  padding: 4rem 0;
+}
+.sign--info {
+  font-family: var(--font-family-1);
+  font-size: 1.25rem;
+  max-width: 15rem;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+.sign-button {
+  background: transparent;
+  color: var(--color-style-3);
+  border: 2px solid var(--color-style-3);
+}
+.sign-button:hover {
+  background: var(--color-style-10);
+  color: #fff;
+}
+.sign-buttons {
+  display: flex;
+  gap: 2rem;
+  max-width: 20rem;
+  margin: 0 auto;
+  justify-content: center;
+}
+@media screen and (min-width: 920px) {
+  .profile--content {
+    width: 40vw;
+  }
+  .sign--info {
+    font-size: 2.25rem;
+    max-width: 20rem;
+  }
+  .sign-buttons {
+    max-width: 20rem;
+  }
+}
 /* 
 =================
 End of Profile--content
@@ -648,6 +685,16 @@ Playlist (second-grid)
 }
 
 .dot--image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.playlist--image--big {
+  width: 100%;
+  height: 17rem;
+  margin-bottom: 4rem;
+}
+.big--pic {
   width: 100%;
   height: 100%;
   object-fit: cover;
